@@ -1,5 +1,4 @@
 import { Icon } from "@iconify/react";
-import Image from 'next/image';
 
 const ProjectCard = ({title, content, img, techs, repo, demo}) => {
     return (
@@ -13,7 +12,7 @@ const ProjectCard = ({title, content, img, techs, repo, demo}) => {
                         </p>
                     </div>
                     <div className="flex items-center flex-col space-y-4 lg:flex-1">
-                        <Image
+                        <img
                             src={img}
                             alt="Picture of the author"
                             width={500}

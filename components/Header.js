@@ -24,7 +24,7 @@ const Header = () => {
                 className={`${toggle ? 'translate-x-0' : '-translate-x-44'} 
                     transform duration-500 ease-in-out absolute top-16 left-4 bg-white rounded-2xl px-6 py-4 shadow-lg w-40
                     md:w-auto md:shadow-none md:translate-x-0 md:bg-transparent md:p-0 md:static`}>
-                <nav className='w-full flex-col space-y-4 md:space-y-0 md:flex-row flex justify-evenly items-center md:space-x-8'>
+                <nav className='w-full flex-col space-y-4 md:space-y-0 md:flex-row flex justify-evenly items-center md:space-x-8 text-gray-600'>
                     <LinkItem content='Home' link="HomeSection"/>
                     <LinkItem content='About Me' link="AboutSection"/>
                     <LinkItem content='Skills' link="SkillsSection"/>

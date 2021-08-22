@@ -1,4 +1,3 @@
-import Image from 'next/image';
 
 const About = () => {
     return (
@@ -9,12 +8,10 @@ const About = () => {
                     <div className="flex flex-col items-center space-y-8 md:flex-row md:space-x-8">
                         <div className="flex justify-center items-center md:flex-1">
                             <div className="h-60 w-60 rounded-full overflow-hidden bg-gradient-to-r from-white via-blue-50 to-blue-100">
-                                <Image
+                                <img
                                     src="/personal-portfolio-img-min.png"
                                     alt="Picture of the author"
-                                    width={500}
-                                    height={500}
-                                    className="object-cover"
+                                    className="object-cover w-full h-full"
                                 />
                             </div>
                         </div>
