@@ -23,9 +23,9 @@ const ProjectCard = ({title, content, img, techs, repo, demo}) => {
                         <div className="flex w-full items-center space-x-4">
                             <p className="text-gray-400 text-sm font-bold">Tech used: </p>
 
-                            {techs.map(tech => (
-                                <Icon icon={tech} className="text-3xl" />
-                            ))}
+                            {techs.map((tech,index) => (
+                                <Icon key={index} icon={tech} className="text-3xl" />
+                                ))}
                         </div>
                     </div>
                 </div>

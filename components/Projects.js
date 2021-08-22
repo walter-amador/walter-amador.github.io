@@ -1,5 +1,6 @@
 import ProjectCard from "./ProjectCard";
 import { Swiper, SwiperSlide } from 'swiper/react';
+import projects from './data/projects.json';
 
 // Import Swiper styles
 import "swiper/swiper.min.css";
@@ -14,7 +15,7 @@ import SwiperCore, {
 SwiperCore.use([Navigation,Pagination,Mousewheel,Keyboard]);
 
 
-const Projects = ({ projects }) => {
+const Projects = () => {
     return (
         <section id="ProjectsSection" name="ProjectsSection" className="min-h-screen flex flex-col justify-center">
             <h2 className="text-blue-400 text-3xl font-extrabold mx-auto my-8 text-center">Side Projects</h2>
@@ -23,9 +24,10 @@ const Projects = ({ projects }) => {
                 <div className="relative w-full">
                 <Swiper cssMode={true} navigation={true} slidesPerView={'auto'} centeredSlides={true} spaceBetween={30} pagination={{"clickable": true}} className="mySwiper">
                     
-                    {projects.map(({title, content, img, techs, repo, demo}) => (
-                        <SwiperSlide>
-                            <ProjectCard 
+                    {projects.map(({id, title, content, img, techs, repo, demo}) => (
+                        <SwiperSlide key={id}>
+                            <ProjectCard
+                                key={id}
                                 title={title}
                                 content={content}
                                 img={img}
