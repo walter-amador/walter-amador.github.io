@@ -1,0 +1,7 @@
+@tailwind components;
+
+@layer components{
+    .btn{
+        @apply rounded-md px-4 py-3 bg-gradient-to-r from-blue-300 via-blue-400 to-blue-500 text-white hover:shadow-lg;
+    }
+}
