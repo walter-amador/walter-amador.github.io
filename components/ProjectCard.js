@@ -29,8 +29,8 @@ const ProjectCard = ({title, content, img, techs, repo, demo}) => {
                     </div>
                 </div>
                 <div className="flex w-full max-w-md items-center space-x-8">
-                    {repo && <a href={repo} className="btn flex-grow flex items-center justify-center text-xs">Github Repo <Icon icon="akar-icons:github-fill" className="text-2xl ml-2" /></a>}
-                    {demo && <a href={demo} className="btn flex-grow h-12 flex items-center justify-center text-xs">Live Demo</a>}
+                    {repo && <a href={repo} target="_blank" className="btn flex-grow flex items-center justify-center text-xs">Github Repo <Icon icon="akar-icons:github-fill" className="text-2xl ml-2" /></a>}
+                    {demo && <a href={demo} target="_blank" className="btn flex-grow h-12 flex items-center justify-center text-xs">Live Demo</a>}
                 </div>
             </div>
         </div>

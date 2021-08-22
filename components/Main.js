@@ -2,24 +2,24 @@ import { Icon } from '@iconify/react';
 
 const Main = () => {
     return (
-        <section id='HomeSection' name='HomeSection' className="relative w-full h-screen flex flex-col items-center md:flex-row overflow-hidden">
+        <section id='HomeSection' name='HomeSection' className="relative w-full h-screen grid grid-cols-1 md:grid-cols-2 items-center md:flex-row overflow-hidden">
             <div className="flex-1 flex justify-center items-center flex-col space-y-2">
                 <div className="w-full md:w-2/3 lg:w-4/5 space-y-2">
                     <p className="text-lg lg:text-2xl text-gray-700 text-center md:text-left xl:text-2xl">Hello, I'm</p>
                     <p className="text-3xl lg:text-5xl text-blue-400 font-black text-center md:text-left xl:text-5xl">Walter Amador</p>
-                    <p className="text-lg lg:text-2xl text-gray-700 font-bold text-center md:text-left xl:text-2xl">Fullstack Web Developer</p>
+                    <h1 className="text-lg lg:text-2xl text-gray-700 font-bold text-center md:text-left xl:text-2xl">Fullstack Web Developer</h1>
                 </div>
                 <div className="py-4 w-full flex items-center justify-center md:w-2/3 lg:w-4/5 md:justify-start">
                     <a href="" className="btn text-xs">Access my resumé</a>
                 </div>
                 <div className="flex justify-center space-x-8 w-full md:w-2/3 lg:w-4/5 md:justify-start">
-                    <a href="">
+                    <a href="https://github.com/WalterIran" target="_blank">
                         <Icon icon="akar-icons:github-fill" className="text-3xl text-blue-400 cursor-pointer" />
                     </a>
-                    <a href="">
+                    <a href="https://www.linkedin.com/in/walter-amador-2149b61b4/" target="_blank">
                         <Icon icon="akar-icons:linkedin-fill" className="text-3xl text-blue-400 cursor-pointer" />
                     </a>
-                    <a href="">
+                    <a href="https://leetcode.com/WalterIran/" target="_blank">
                         <Icon icon="cib:leetcode" className="text-3xl text-blue-400 cursor-pointer" />
                     </a>
                 </div>
