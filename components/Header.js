@@ -1,4 +1,3 @@
-import { Link } from 'react-scroll';
 import { Icon } from '@iconify/react';
 import htmlIcon from '@iconify/icons-whh/html';
 import menuAlt2 from '@iconify/icons-heroicons-solid/menu-alt-2';
