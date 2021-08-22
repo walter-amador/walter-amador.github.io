@@ -5,16 +5,6 @@ import Main from '../components/Main'
 import Projects from '../components/Projects'
 import Skills from '../components/Skills'
 
-export const getStaticProps = async () => {
-  const res = await fetch('http://localhost:3000/api/projects');
-  const data = await res.json();
-  return {
-      props: {
-          projects: data
-      }
-  }
-}
-
 export default function Home({projects}) {
   return (
     <div className="bg-gray-50 font-poppins">
@@ -44,4 +34,14 @@ export default function Home({projects}) {
       {/* Contact */}
     </div>
   )
+}
+
+export const getStaticProps = async () => {
+  const res = await fetch('http://localhost:3000/api/projects');
+  const data = await res.json();
+  return {
+      props: {
+          projects: data
+      }
+  }
 }
