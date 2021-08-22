@@ -10,11 +10,11 @@ const Skills = () => {
             <div className="flex flex-col w-11/12 mx-auto space-y-8 md:justify-center md:flex-row md:space-y-0 md:space-x-8">
                 <div className="flex-1 max-w-xl">
                     <div className="space-y-2">
-                        <ProgressBar icon="vscode-icons:file-type-html" progress="11" color="bg-green-400" />
-                        <ProgressBar icon="vscode-icons:file-type-css" progress="11" color="bg-green-400" />
-                        <ProgressBar icon="vscode-icons:file-type-reactjs" progress="11" color="bg-green-400" />
-                        <ProgressBar icon="logos:nodejs-icon" progress="6" color="bg-yellow-400" />
-                        <ProgressBar icon="logos:git-icon" progress="11" color="bg-green-400" />
+                        <ProgressBar icon="vscode-icons:file-type-html" progress="w-11/12" color="bg-green-400" />
+                        <ProgressBar icon="vscode-icons:file-type-css" progress="w-11/12" color="bg-green-400" />
+                        <ProgressBar icon="vscode-icons:file-type-reactjs" progress="w-11/12" color="bg-green-400" />
+                        <ProgressBar icon="logos:nodejs-icon" progress="w-6/12" color="bg-yellow-400" />
+                        <ProgressBar icon="logos:git-icon" progress="w-11/12" color="bg-green-400" />
                         <div className="mt-4 space-y-2">
                             <p className="text-gray-600 font-bold text-sm">Other technologies that I've used before:</p>
                             <div className="flex items-center space-x-4 md:space-x-8">

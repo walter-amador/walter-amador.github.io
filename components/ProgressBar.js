@@ -9,7 +9,7 @@ const ProgressBar = ({icon, progress, color}) => {
             </div>
             <div className="flex-1 px-2">
                 <div className="h-6 w-full bg-gray-300 rounded-full">
-                    <div className={`h-full w-${progress}/12 rounded-full ${color}`}></div>
+                    <div className={`h-full ${progress} rounded-full ${color}`}></div>
                 </div>
             </div>
         </div>
