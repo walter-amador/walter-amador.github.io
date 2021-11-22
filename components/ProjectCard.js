@@ -18,6 +18,7 @@ const ProjectCard = ({title, content, img, techs, repo, demo}) => {
                             width={500}
                             height={300}
                             className="object-cover rounded-lg shadow-lg"
+                            loading="lazy"
                         />
                         <div className="flex w-full items-center space-x-4">
                             <p className="text-gray-400 text-sm font-bold">Tech used: </p>

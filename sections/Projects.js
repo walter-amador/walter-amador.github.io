@@ -1,6 +1,6 @@
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "../components/ProjectCard";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import projects from './data/projects.json';
+import projects from '../data/projects.json';
 
 // Import Swiper styles
 import "swiper/swiper.min.css";

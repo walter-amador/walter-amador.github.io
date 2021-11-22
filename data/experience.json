@@ -1,0 +1,61 @@
+[
+    {
+        "title": "Hackathon Ficohsa 2021",
+        "date": "October 18 - October 22, 2021",
+        "desc": [
+                    "Winners of the challenge 'TVC - Directorio En Línea Para PyMEs'",
+                    "Working on a five members team in which we were four programmers and one marketing",
+                    "Developed a web app using NextJs, Firebase and Tailwindcss for small and medium size entrepreneurs in Honduras to connect them with their clients",
+                    "The challenge prize was a media tour of 4 interviews in the programs: Hoy Hoy Estelar, Las Mañanas del 5, La Tarde, TN5 Matutino and Reportage en Tu Nota + $ 500 in cloud credits sponsored by Oracle for Startups.",
+                    "Hackathon sponsors were Ficohsa Bank, Oracle, Tech4DevHN and Televicentro"
+                ],
+        "refs": [
+                    {
+                        "link": "https://fb.watch/9qm5DgzvmW/",
+                        "desc": "Ficohsa Bank official account winners publication"
+                    },
+                    {
+                        "link": "https://www.laprensa.hn/economia/ficohsa-y-oracle-finalizan-primer-hackathon-regional-de-innovacion-DB3300342",
+                        "desc": "www.laprensa.hn"
+                    },
+                    {
+                        "link": "https://youtu.be/ORUkoVoWm7o?t=1753",
+                        "desc": "One of the interviews recorded on YouTube"
+                    }
+                ],
+        "imgs": [
+                    "/experience/hackathon/directory.png", 
+                    "/experience/hackathon/searchScreen.png",
+                    "https://www.laprensa.hn/binrepository/900x556/0c30/900d506/none/11004/FXEP/4-ficohsa-equipo-unicah_394821_20211029142800.jpg"
+                ]
+    },
+    {
+        "title": "CELTI Latam",
+        "date": "September - October, 2021",
+        "desc": [
+                    "Team Lead in charge of developing CELTI's Landing Page",
+                    "Working remotely with other engineers from Mexico, Guatemala and Nicaragua",
+                    "Used NextJs and Tailwindcss to develop the Landing Page",
+                    "Participation as public moderator for two conferences",
+                    "Event made by students for anyone interested in technology all around Latin America"
+                ],
+        "refs": [
+                    {
+                        "link": "https://www.celti.tech/",
+                        "desc": "Landing Page link"
+                    },
+                    {
+                        "link": "https://www.linkedin.com/company/celtilatam/",
+                        "desc": "Linkedin of the event"
+                    },
+                    {
+                        "link": "https://youtu.be/tLEfhTEBZiU?t=168",
+                        "desc": "YouTube Link to live conference recorded"
+                    }
+                ],
+        "imgs": [
+                    "/experience/celti/landingPage.png", 
+                    "/experience/celti/conference1.png"
+                ]
+    }
+]

@@ -1,13 +1,32 @@
-import Head from 'next/head'
-import About from '../components/About'
-import Contact from '../components/Contact'
-import Footer from '../components/Footer'
-import Header from '../components/Header'
-import Main from '../components/Main'
-import Projects from '../components/Projects'
-import Skills from '../components/Skills'
+import { useEffect } from 'react';
+import Head from 'next/head';
+
+//Sections
+import About from '../sections/About';
+import Contact from '../sections/Contact';
+import Experience from '../sections/Experience';
+import Main from '../sections/Main';
+import Projects from '../sections/Projects';
+import Skills from '../sections/Skills';
+
+//Components
+import Footer from '../components/Footer';
+import Header from '../components/Header';
+
+//Libs
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Home({projects}) {
+
+  useEffect(() =>{
+    AOS.init(
+      {
+        once: true,
+      }
+    )
+  },[]);
+
   return (
     <div className="bg-gray-50 font-poppins">
       <Head>
@@ -23,6 +42,9 @@ export default function Home({projects}) {
 
       {/* About Me */}
       <About />
+
+      {/* Work experience */}
+      <Experience />
 
       {/* Skills */}
       <Skills />

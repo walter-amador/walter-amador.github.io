@@ -1,0 +1,56 @@
+[
+    {
+        "id":"1",
+        "title": "Whatsapp Web Clone",
+        "content": "This is a clone of Whatsapp Web using firestore to store the messages and also using Firebase Google Authentication to login, this clone was made using ReactJS. Once you login on the app, you can type the email of someone and then you will be able to chat with that person. You can also send images that will be stored on Firebase Storage.",
+        "img":"/projects/whatsapp-web-clone-img.webp",
+        "techs": ["logos:react","vscode-icons:file-type-css","logos:firebase"],
+        "repo":"https://github.com/WalterIran/whatsapp-web-clone-app",
+        "demo":"https://whatsapp-clone-reactjs-1d9af.web.app/"
+    },
+    {
+        "id":"2",
+        "title": "Airbnb Clone",
+        "content": "This was my first project using NextJS and Tailwindcss. The data used on this app is from a Youtube content creator named Sonny Sangh. Here I have a modern and responsive design in which you can interact with libraries like react-map-gl, react-date-range, and geolib to show a map.",
+        "img":"/projects/airbnb-clone-img.webp",
+        "techs": ["logos:react","logos:nextjs-icon","vscode-icons:file-type-tailwind"],
+        "repo":"https://github.com/WalterIran/airbnb-clone-app",
+        "demo":"https://airbnb-clone-app-hjwdf6s38-walteriran.vercel.app/"
+    },
+    {
+        "id":"3",
+        "title": "Amazon Clone",
+        "content": "This was my first project when I was learning ReactJS, here you will see some basic functionality of adding to cart some products chosen on the main screen, then you can see a preview of your cart where you can remove some products also.",
+        "img":"/projects/amazon-clone-img.webp",
+        "techs": ["logos:react","vscode-icons:file-type-css"],
+        "repo":"https://github.com/WalterIran/amazon-clone-app",
+        "demo":"https://clone-cf475.web.app/"
+    },
+    {
+        "id":"4",
+        "title": "Movie App",
+        "content": "This app was made following a tutorial of FreeCodeCamp, I wanted to gain experience building styled components with responsive design and fetching data from The Movie DB API, in this app you will see how the most popular movies are shown and you are also able to search for movies and see some information of each movie.",
+        "img":"/projects/movie-app-img.webp",
+        "techs": ["logos:react","vscode-icons:file-type-styled","logos:react-router"],
+        "repo":"https://github.com/WalterIran/movie-react-app",
+        "demo":"https://movie-app-walteriran.netlify.app/"
+    },
+    {
+        "id":"5",
+        "title": "RNP Honduras",
+        "content": "This app was made for a class project in which we were learning how to use PHP Laravel with the MVC design pattern by creating a dashboard for employees to see registered people on the online site. In this app I learned how to do Laravel Migrations to a MySQL database and for speeding up the development we used Bootstrap 5.",
+        "img":"/projects/rnp-clone-img.webp",
+        "techs": ["logos:laravel","logos:bootstrap","simple-icons:mysql"],
+        "repo":"https://github.com/WalterIran/rnp-clone-app",
+        "demo":"https://clonrnp.laperlatech.com/"
+    },
+    {
+        "id":"6",
+        "title": "CamiDental Desktop",
+        "content": "This desktop app was made with Windows Forms using C# and .NET Framework for a class project in which we were 11 team members and I as the team lead, it is used by a dental clinic to manage their patients and all the medical appointments by connecting to Google Calendar API, the database used was MSSQL Server stored on Amazon Web Services. We also used a little bit of Python to store the backups on AWS S3 bucket and later bring those backups locally.",
+        "img":"/projects/camidental-app.webp",
+        "techs": ["logos:c-sharp","logos:aws","simple-icons:microsoftsqlserver","logos:google-calendar","logos:python"],
+        "repo":"",
+        "demo":""
+    }
+]
