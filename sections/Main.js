@@ -16,7 +16,7 @@ const Main = () => {
                     <h1 className="text-lg lg:text-2xl text-gray-50 font-bold text-center md:text-left xl:text-2xl">Fullstack Web Developer</h1>
                 </div>
                 <div className="py-4 w-full flex items-center justify-center md:w-2/3 lg:w-4/5 md:justify-start">
-                    <a href="" className="transition-all duration-100 rounded-md px-4 py-3 bg-gradient-to-r from-blue-800 via-blue-600 to-blue-500 border-[3px] border-gray-300 text-white hover:shadow-lg text-xs">Access my resumé</a>
+                    <a href="/WalterAmador_CV.pdf" target="_blank" className="transition-all duration-100 rounded-md px-4 py-3 bg-gradient-to-r from-blue-800 via-blue-600 to-blue-500 border-[3px] border-gray-300 text-white hover:shadow-lg text-xs">Access my resumé</a>
                 </div>
                 <div className="flex justify-center space-x-8 w-full md:w-2/3 lg:w-4/5 md:justify-start">
                     <a href="https://github.com/WalterIran" target="_blank">
