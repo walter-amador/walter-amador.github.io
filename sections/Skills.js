@@ -33,7 +33,7 @@ const Skills = () => {
                     student, I've been learning many technologies to develop <span className="text-blue-500"> frontend </span>
                     and <span className="text-blue-500">backend software</span>. I haven't limited
                     myself to the knowledge provided by the university, I love web development
-                    so much that I started <span className="text-blue-500"> teching myself other technologies
+                    so much that I started <span className="text-blue-500"> teaching myself other technologies
                     such as ReactJs and NextJs </span> with which I fell in love.
                     <br /><br />
                     Working with other programmers is not a problem for me, I really prefer getting
