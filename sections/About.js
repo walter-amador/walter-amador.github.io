@@ -29,13 +29,13 @@ const About = () => {
                         <h3 className="text-2xl text-white font-bold text-center my-8">My three favorite sayings</h3>
                         <div className="text-gray-700 font-semibold flex flex-col space-y-8 lg:flex-row lg:space-y-0 lg:space-x-8">
                             <div className="h-20 bg-white shadow-lg rounded-xl py-4 px-2 flex justify-center items-center lg:w-4/12">
-                                <p className="text-center">Never stop moving forward</p>
+                                <p className="text-center">Never stop learing</p>
                             </div>
                             <div className="h-20 bg-white shadow-lg rounded-xl py-4 px-2 flex justify-center items-center lg:w-4/12">
                                 <p className="text-center">Your future is created by what you do today, not tomorrow</p>
                             </div>
                             <div className="h-20 bg-white shadow-lg rounded-xl py-4 px-2 flex justify-center items-center lg:w-4/12">
-                                <p className="text-center">Always dream big and work hard and smart to achieve your goals</p>
+                                <p className="text-center">Always dream big, work hard and smart to achieve your goals</p>
                             </div>
                         </div>
                     </div>
