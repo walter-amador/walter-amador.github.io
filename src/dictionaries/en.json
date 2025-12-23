@@ -1,0 +1,59 @@
+{
+  "navigation": {
+    "home": "Home",
+    "experience": "Experience",
+    "about": "About Me",
+    "testimonials": "Testimonials"
+  },
+  "sections": {
+    "home": {
+      "salut": "Hi, I'm",
+      "developer": "Full Stack Developer"
+    },
+    "experiece": {},
+    "about": {
+      "description": "As a seasoned Full Stack developer, I specialize in creating desktop, mobile, and web applications, along with APIs. My expertise in AWS enables me to design scalable solutions. With a strong collaborative spirit, I translate requirements into practical solutions while maintaining a solution-oriented approach and effective communication.",
+      "principle1": "Embrace Progress: Never stop moving forward",
+      "principle2": "Architecting Tomorrow: Your future is crafted through today's actions, not tomorrow's intentions.",
+      "principle3": "Dream Big, Work Hard: Always aspire for greatness and tirelessly pursue your goals"
+    },
+    "testimonials": {
+      "title": "Testimonials",
+      "description": "People I’ve worked with have said some nice things...",
+      "referenceLinkText": "Reference to LinkedIn recommendation",
+      "referenceLink": "https://www.linkedin.com/in/walter-amador/details/recommendations/",
+      "references": [
+        {
+          "name": "Orlando Betancourth",
+          "title": "Technical Lead Manager at Sumadi",
+          "recommendation": "Walter is a standout Full Stack Developer, showcasing remarkable expertise and an insatiable hunger for learning. His positive attitude, dedication to growth, and exceptional results make him a valuable asset to any team.",
+          "imgLink": "https://media.licdn.com/dms/image/D4E03AQFF6iwYomC94g/profile-displayphoto-shrink_100_100/0/1688340071241?e=1709164800&v=beta&t=i5BUhKUGU_jY8pGKY908STApJJBw-dx-PRuExXKjpHI"
+        },
+        {
+          "name": "Raúl Palma",
+          "title": "Full Stack Software Developer | University Professor | Researcher",
+          "recommendation": "Walter is an exceptional Software Developer with rapid learning abilities, a strong work ethic, and outstanding problem-solving skills. I highly recommend him for any software development role.",
+          "imgLink": "https://media.licdn.com/dms/image/C4E03AQH782ZmVwQ_BQ/profile-displayphoto-shrink_100_100/0/1529969072976?e=1709164800&v=beta&t=2V1oLWNEjik7SQCo8oyOcGwH1NkQ0LqCRy4H-B66w5s"
+        },
+        {
+          "name": "Héctor Rodriguez",
+          "title": "Technical Lead Manager at Sumadi",
+          "recommendation": "Walter is a highly skilled and committed developer, known for his efficiency, quality work, and pleasant demeanor. A pleasure to work with.",
+          "imgLink": "https://media.licdn.com/dms/image/D5635AQFZgMG1whBxuQ/profile-framedphoto-shrink_100_100/0/1697238772212?e=1704409200&v=beta&t=AcWqXYswvMq2pKRqnhKJ0SjrqevXwvX5fByyFqSZHsc"
+        },
+        {
+          "name": "Julio Zuniga",
+          "title": "DevOps Engineer | Sys Admin | Cloud Engineer",
+          "recommendation": "Walter is an exceptional full-stack developer, showcasing outstanding technical skills and unwavering professionalism. I wholeheartedly recommend him.",
+          "imgLink": "https://media.licdn.com/dms/image/D4E03AQHO7W8lUgaFOA/profile-displayphoto-shrink_100_100/0/1689201509624?e=1709164800&v=beta&t=MWyMDOVdMYaR4MvJBUCoqUww75cJqdgI2D_SmlrThlk"
+        },
+        {
+          "name": "Yasmin Vargas",
+          "title": "Scrum Master",
+          "recommendation": "I worked with Walter, an exceptional software developer known for his curiosity, innovation, and collaborative spirit. His analytical thinking and willingness to share knowledge make him invaluable to any software development team.",
+          "imgLink": "https://media.licdn.com/dms/image/D4E35AQGSu4WaUIAoGQ/profile-framedphoto-shrink_100_100/0/1703125395683?e=1704409200&v=beta&t=9vC_eybddgR76mw2NMnVRD0IvnGrG5RyWgTnyWPG8VU"
+        }
+      ]
+    }
+  }
+}

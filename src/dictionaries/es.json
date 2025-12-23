@@ -1,0 +1,59 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "experience": "Experiencia",
+    "about": "Sobre mí",
+    "testimonials": "Testimonios"
+  },
+  "sections": {
+    "home": {
+      "salut": "Hola, soy",
+      "developer": "Desarrollador Full Stack"
+    },
+    "experience": {},
+    "about": {
+      "description": "Como desarrollador Full Stack experimentado, me especializo en crear aplicaciones de escritorio, móviles y web, junto con APIs. Mi experiencia en AWS me permite diseñar soluciones escalables. Con un fuerte espíritu colaborativo, traduzco los requisitos en soluciones prácticas manteniendo un enfoque orientado a la solución y una comunicación efectiva.",
+      "principle1": "Abrazar el Progreso: Nunca dejes de avanzar",
+      "principle2": "Arquitectando el Mañana: Tu futuro se construye a través de las acciones de hoy, no de las intenciones de mañana.",
+      "principle3": "Soñar en Grande, Trabajar Duro: Siempre aspira a la grandeza y persigue incansablemente tus metas"
+    },
+    "testimonials": {
+      "title": "Testimonios",
+      "description": "Las personas con las que he trabajado han dicho cosas bonitas...",
+      "referenceLinkText": "Referencia a recomendación en LinkedIn",
+      "referenceLink": "https://www.linkedin.com/in/walter-amador/details/recommendations/",
+      "references": [
+        {
+          "name": "Orlando Betancourth",
+          "title": "Líder Técnico de Sumadi",
+          "recommendation": "Walter es un destacado Desarrollador Full Stack, mostrando una notable experiencia y un hambre insaciable por aprender. Su actitud positiva, dedicación al crecimiento y resultados excepcionales lo convierten en un activo valioso para cualquier equipo.",
+          "imgLink": "https://media.licdn.com/dms/image/D4E03AQFF6iwYomC94g/profile-displayphoto-shrink_100_100/0/1688340071241?e=1709164800&v=beta&t=i5BUhKUGU_jY8pGKY908STApJJBw-dx-PRuExXKjpHI"
+        },
+        {
+          "name": "Raúl Palma",
+          "title": "Desarrollador de Software Full Stack | Profesor Universitario | Investigador",
+          "recommendation": "Walter es un excepcional Desarrollador de Software con habilidades de aprendizaje rápido, una sólida ética de trabajo y destacadas habilidades para resolver problemas. Lo recomiendo ampliamente para cualquier rol de desarrollo de software.",
+          "imgLink": "https://media.licdn.com/dms/image/C4E03AQH782ZmVwQ_BQ/profile-displayphoto-shrink_100_100/0/1529969072976?e=1709164800&v=beta&t=2V1oLWNEjik7SQCo8oyOcGwH1NkQ0LqCRy4H-B66w5s"
+        },
+        {
+          "name": "Héctor Rodriguez",
+          "title": "Software Developer",
+          "recommendation": "Walter es un desarrollador altamente capacitado y comprometido, conocido por su eficiencia, trabajo de calidad y trato agradable. Es un placer trabajar con él.",
+          "imgLink": "https://media.licdn.com/dms/image/D5635AQFZgMG1whBxuQ/profile-framedphoto-shrink_100_100/0/1697238772212?e=1704409200&v=beta&t=AcWqXYswvMq2pKRqnhKJ0SjrqevXwvX5fByyFqSZHsc"
+        },
+        {
+          "name": "Julio Zuniga",
+          "title": "Ingeniero DevOps | Administrador de Sistemas | Ingeniero Cloud",
+          "recommendation": "Walter es un excepcional desarrollador full-stack, mostrando habilidades técnicas sobresalientes y profesionalismo inquebrantable. Lo recomiendo de todo corazón.",
+          "imgLink": "https://media.licdn.com/dms/image/D4E03AQHO7W8lUgaFOA/profile-displayphoto-shrink_100_100/0/1689201509624?e=1709164800&v=beta&t=MWyMDOVdMYaR4MvJBUCoqUww75cJqdgI2D_SmlrThlk"
+        },
+        {
+          "name": "Yasmin Vargas",
+          "title": "Scrum Master",
+          "recommendation": "Trabajé con Walter, un excepcional desarrollador de software conocido por su curiosidad, innovación y espíritu colaborativo. Su pensamiento analítico y disposición para compartir conocimientos lo hacen invaluable para cualquier equipo de desarrollo de software.",
+          "imgLink": "https://media.licdn.com/dms/image/D4E35AQGSu4WaUIAoGQ/profile-framedphoto-shrink_100_100/0/1703125395683?e=1704409200&v=beta&t=9vC_eybddgR76mw2NMnVRD0IvnGrG5RyWgTnyWPG8VU"
+        }
+      ]
+    }
+  }
+}

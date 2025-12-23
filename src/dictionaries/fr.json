@@ -1,0 +1,59 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "experience": "Expérience",
+    "about": "À propos de moi",
+    "testimonials": "Témoignages"
+  },
+  "sections": {
+    "home": {
+      "salut": "Salut, je suis",
+      "developer": "Développeur Full Stack"
+    },
+    "experience": {},
+    "about": {
+      "description": "En tant que développeur Full Stack chevronné, je me spécialise dans la création d'applications de bureau, mobiles et web, ainsi que d'API. Mon expertise dans AWS me permet de concevoir des solutions évolutives. Avec un esprit de collaboration solide, je traduis les exigences en solutions pratiques tout en maintenant une approche axée sur la résolution de problèmes et une communication efficace.",
+      "principle1": "Embrasser le progrès : Ne jamais cesser d'avancer",
+      "principle2": "Architecturer demain : Votre avenir se construit à travers les actions d'aujourd'hui, pas les intentions de demain.",
+      "principle3": "Rêver grand, travailler dur : Aspirez toujours à la grandeur et poursuivez sans relâche vos objectifs"
+    },
+    "testimonials": {
+      "title": "Témoignages",
+      "description": "Les personnes avec qui j'ai travaillé ont dit de belles choses...",
+      "referenceLinkText": "Référence à la recommandation LinkedIn",
+      "referenceLink": "https://www.linkedin.com/in/walter-amador/details/recommendations/",
+      "references": [
+        {
+          "name": "Orlando Betancourth",
+          "title": "Responsable technique chez Sumadi",
+          "recommendation": "Walter est un développeur Full Stack exceptionnel, faisant preuve d'une expertise remarquable et d'une soif insatiable d'apprendre. Son attitude positive, son dévouement à la croissance et ses résultats exceptionnels font de lui un atout précieux pour toute équipe.",
+          "imgLink": "https://media.licdn.com/dms/image/D4E03AQFF6iwYomC94g/profile-displayphoto-shrink_100_100/0/1688340071241?e=1709164800&v=beta&t=i5BUhKUGU_jY8pGKY908STApJJBw-dx-PRuExXKjpHI"
+        },
+        {
+          "name": "Raúl Palma",
+          "title": "Développeur logiciel Full Stack | Professeur d'université | Chercheur",
+          "recommendation": "Walter est un développeur logiciel exceptionnel avec des capacités d'apprentissage rapide, une forte éthique de travail et d'excellentes compétences en résolution de problèmes. Je le recommande vivement pour tout rôle de développement logiciel.",
+          "imgLink": "https://media.licdn.com/dms/image/C4E03AQH782ZmVwQ_BQ/profile-displayphoto-shrink_100_100/0/1529969072976?e=1709164800&v=beta&t=2V1oLWNEjik7SQCo8oyOcGwH1NkQ0LqCRy4H-B66w5s"
+        },
+        {
+          "name": "Héctor Rodriguez",
+          "title": "Responsable technique chez Sumadi",
+          "recommendation": "Walter est un développeur hautement qualifié et engagé, connu pour son efficacité, son travail de qualité et sa bonne humeur. Un plaisir de travailler avec lui.",
+          "imgLink": "https://media.licdn.com/dms/image/D5635AQFZgMG1whBxuQ/profile-framedphoto-shrink_100_100/0/1697238772212?e=1704409200&v=beta&t=AcWqXYswvMq2pKRqnhKJ0SjrqevXwvX5fByyFqSZHsc"
+        },
+        {
+          "name": "Julio Zuniga",
+          "title": "Ingénieur DevOps | Administrateur système | Ingénieur Cloud",
+          "recommendation": "Walter est un développeur Full Stack exceptionnel, faisant preuve de compétences techniques exceptionnelles et d'un professionnalisme inébranlable. Je le recommande vivement.",
+          "imgLink": "https://media.licdn.com/dms/image/D4E03AQHO7W8lUgaFOA/profile-displayphoto-shrink_100_100/0/1689201509624?e=1709164800&v=beta&t=MWyMDOVdMYaR4MvJBUCoqUww75cJqdgI2D_SmlrThlk"
+        },
+        {
+          "name": "Yasmin Vargas",
+          "title": "Scrum Master",
+          "recommendation": "J'ai travaillé avec Walter, un développeur logiciel exceptionnel connu pour sa curiosité, son innovation et son esprit collaboratif. Sa pensée analytique et sa volonté de partager ses connaissances en font une personne inestimable pour toute équipe de développement logiciel.",
+          "imgLink": "https://media.licdn.com/dms/image/D4E35AQGSu4WaUIAoGQ/profile-framedphoto-shrink_100_100/0/1703125395683?e=1704409200&v=beta&t=9vC_eybddgR76mw2NMnVRD0IvnGrG5RyWgTnyWPG8VU"
+        }
+      ]
+    }
+  }
+}

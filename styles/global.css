@@ -1,9 +1,0 @@
-@tailwind components;
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
-
-@layer components{
-    .btn{
-        @apply transition-all duration-100 rounded-md px-4 py-3 bg-gradient-to-r from-blue-300 via-blue-400 to-blue-500 text-white hover:shadow-lg;
-    }
-}
