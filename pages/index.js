@@ -134,7 +134,7 @@ const content = {
   },
 };
 
-function SkillsSection() {
+function SkillsSection({ darkMode }) {
   const categories = [
     {
       title: 'Frontend & Mobile',
@@ -172,17 +172,23 @@ function SkillsSection() {
       {categories.map((cat) => (
         <div
           key={cat.title}
-          className="rounded-xl border border-slate-100 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-slate-700 dark:bg-slate-800"
+          className={`rounded-xl border p-6 shadow-sm transition-shadow hover:shadow-md ${
+            darkMode ? 'border-slate-700 bg-slate-800' : 'border-slate-100 bg-white'
+          }`}
         >
           <div className="mb-4 flex items-center gap-3">
             {cat.icon}
-            <h3 className="text-lg font-bold text-slate-900 dark:text-white">{cat.title}</h3>
+            <h3 className={`text-lg font-bold ${darkMode ? 'text-white' : 'text-slate-900'}`}>
+              {cat.title}
+            </h3>
           </div>
           <div className="flex flex-wrap gap-2">
             {cat.skills.map((skill) => (
               <span
                 key={skill}
-                className="rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700 dark:bg-slate-700 dark:text-slate-300"
+                className={`rounded-full px-3 py-1 text-sm font-medium ${
+                  darkMode ? 'bg-slate-700 text-slate-300' : 'bg-slate-100 text-slate-700'
+                }`}
               >
                 {skill}
               </span>
@@ -195,18 +201,35 @@ function SkillsSection() {
 }
 
 export default function Portfolio() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
   const [language, setLanguage] = useState('en');
   const [isScrolled, setIsScrolled] = useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
 
   const langMenuRef = useRef(null);
 
+  // Initialize theme from localStorage or system preference on mount
+  useEffect(() => {
+    const saved = window.localStorage.getItem('theme');
+    if (saved === 'light') {
+      setDarkMode(false);
+    } else if (saved === 'dark') {
+      setDarkMode(true);
+    } else {
+      const prefersDark = window.matchMedia?.('(prefers-color-scheme: dark)')?.matches ?? false;
+      setDarkMode(prefersDark);
+    }
+  }, []);
+
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem('theme', darkMode ? 'dark' : 'light');
+  }, [darkMode]);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -233,13 +256,15 @@ export default function Portfolio() {
 
       <div
         className={`min-h-screen font-sans transition-colors duration-300 ${
-          darkMode ? 'dark bg-slate-950 text-slate-200' : 'bg-slate-50 text-slate-900'
+          darkMode ? 'bg-slate-950 text-slate-200' : 'bg-slate-50 text-slate-900'
         }`}
       >
         <nav
           className={`fixed top-0 z-50 w-full border-b transition-all duration-300 ${
             isScrolled
-              ? 'border-slate-200 bg-white/80 py-3 backdrop-blur-md dark:border-slate-800 dark:bg-slate-950/80'
+              ? darkMode
+                ? 'border-slate-800 bg-slate-950/80 py-3 backdrop-blur-md'
+                : 'border-slate-200 bg-white/80 py-3 backdrop-blur-md'
               : 'border-transparent bg-transparent py-5'
           }`}
         >
@@ -248,7 +273,9 @@ export default function Portfolio() {
               <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 font-bold text-white">
                 W
               </span>
-              <span className="hidden text-slate-800 dark:text-white sm:block">Walter Amador</span>
+              <span className={`hidden sm:block ${darkMode ? 'text-white' : 'text-slate-800'}`}>
+                Walter Amador
+              </span>
             </div>
 
             <div className="flex items-center gap-4">
@@ -256,7 +283,9 @@ export default function Portfolio() {
                 <button
                   type="button"
                   onClick={() => setIsLangMenuOpen((v) => !v)}
-                  className="flex items-center gap-1 rounded-md px-2 py-1 text-sm font-medium transition-colors hover:text-blue-500"
+                  className={`flex cursor-pointer items-center gap-1 rounded-md px-2 py-1 text-sm font-medium transition-colors hover:text-blue-500 ${
+                    darkMode ? 'text-slate-200' : 'text-slate-700'
+                  }`}
                 >
                   <Globe className="h-4 w-4" />
                   <span className="uppercase">{language}</span>
@@ -266,16 +295,22 @@ export default function Portfolio() {
                 </button>
 
                 {isLangMenuOpen && (
-                  <div className="absolute right-0 top-full z-50 mt-2 w-32 overflow-hidden rounded-lg border border-slate-200 bg-white shadow-lg dark:border-slate-700 dark:bg-slate-800">
+                  <div
+                    className={`absolute right-0 top-full z-50 mt-2 w-32 overflow-hidden rounded-lg border shadow-lg ${
+                      darkMode
+                        ? 'border-slate-700 bg-slate-800'
+                        : 'border-slate-200 bg-white'
+                    }`}
+                  >
                     <button
                       type="button"
                       onClick={() => {
                         setLanguage('en');
                         setIsLangMenuOpen(false);
                       }}
-                      className={`block w-full px-4 py-2 text-left text-sm hover:bg-slate-100 dark:hover:bg-slate-700 ${
-                        language === 'en' ? 'font-bold text-blue-600' : ''
-                      }`}
+                      className={`block w-full cursor-pointer px-4 py-2 text-left text-sm ${
+                        darkMode ? 'text-slate-100 hover:bg-slate-700' : 'text-slate-800 hover:bg-slate-100'
+                      } ${language === 'en' ? 'font-bold text-blue-600' : ''}`}
                     >
                       English
                     </button>
@@ -285,9 +320,9 @@ export default function Portfolio() {
                         setLanguage('es');
                         setIsLangMenuOpen(false);
                       }}
-                      className={`block w-full px-4 py-2 text-left text-sm hover:bg-slate-100 dark:hover:bg-slate-700 ${
-                        language === 'es' ? 'font-bold text-blue-600' : ''
-                      }`}
+                      className={`block w-full cursor-pointer px-4 py-2 text-left text-sm ${
+                        darkMode ? 'text-slate-100 hover:bg-slate-700' : 'text-slate-800 hover:bg-slate-100'
+                      } ${language === 'es' ? 'font-bold text-blue-600' : ''}`}
                     >
                       Español
                     </button>
@@ -297,9 +332,9 @@ export default function Portfolio() {
                         setLanguage('fr');
                         setIsLangMenuOpen(false);
                       }}
-                      className={`block w-full px-4 py-2 text-left text-sm hover:bg-slate-100 dark:hover:bg-slate-700 ${
-                        language === 'fr' ? 'font-bold text-blue-600' : ''
-                      }`}
+                      className={`block w-full cursor-pointer px-4 py-2 text-left text-sm ${
+                        darkMode ? 'text-slate-100 hover:bg-slate-700' : 'text-slate-800 hover:bg-slate-100'
+                      } ${language === 'fr' ? 'font-bold text-blue-600' : ''}`}
                     >
                       Français
                     </button>
@@ -310,7 +345,9 @@ export default function Portfolio() {
               <button
                 type="button"
                 onClick={() => setDarkMode((v) => !v)}
-                className="rounded-full p-2 transition-colors hover:bg-slate-200 dark:hover:bg-slate-800"
+                className={`cursor-pointer rounded-full p-2 transition-colors ${
+                  darkMode ? 'hover:bg-slate-800' : 'hover:bg-slate-200'
+                }`}
                 aria-label="Toggle theme"
               >
                 {darkMode ? (
@@ -327,14 +364,26 @@ export default function Portfolio() {
           <div className="mx-auto max-w-4xl">
             <section className="py-20 md:py-32">
               <div className="space-y-6">
-                <div className="inline-flex items-center gap-2 rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">
+                <div
+                  className={`inline-flex items-center gap-2 rounded-full px-3 py-1 text-sm font-medium ${
+                    darkMode ? 'bg-blue-900/30 text-blue-300' : 'bg-blue-100 text-blue-700'
+                  }`}
+                >
                   <Code2 className="h-4 w-4" />
                   {t.role}
                 </div>
-                <h1 className="text-5xl font-extrabold leading-tight tracking-tight text-slate-900 dark:text-white md:text-7xl">
+                <h1
+                  className={`text-5xl font-extrabold leading-tight tracking-tight md:text-7xl ${
+                    darkMode ? 'text-white' : 'text-slate-900'
+                  }`}
+                >
                   {t.heroHeadline}
                 </h1>
-                <p className="max-w-2xl text-xl leading-relaxed text-slate-600 dark:text-slate-400">
+                <p
+                  className={`max-w-2xl text-xl leading-relaxed ${
+                    darkMode ? 'text-slate-400' : 'text-slate-600'
+                  }`}
+                >
                   {t.heroSub}
                 </p>
 
@@ -352,7 +401,11 @@ export default function Portfolio() {
                     href="https://github.com/walter-amador"
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-6 py-3 font-medium text-slate-900 transition-colors hover:border-slate-300 dark:border-slate-700 dark:bg-slate-800 dark:text-white dark:hover:border-slate-600"
+                    className={`inline-flex items-center gap-2 rounded-lg border px-6 py-3 font-medium transition-colors ${
+                      darkMode
+                        ? 'border-slate-700 bg-slate-800 text-white hover:border-slate-600'
+                        : 'border-slate-200 bg-white text-slate-900 hover:border-slate-300'
+                    }`}
                   >
                     <Github className="h-5 w-5" />
                     GitHub
@@ -361,48 +414,80 @@ export default function Portfolio() {
               </div>
             </section>
 
-            <section className="border-t border-slate-200 py-16 dark:border-slate-800">
-              <h2 className="mb-8 flex items-center gap-3 text-3xl font-bold text-slate-900 dark:text-white">
+            <section className={`border-t py-16 ${darkMode ? 'border-slate-800' : 'border-slate-200'}`}>
+              <h2
+                className={`mb-8 flex items-center gap-3 text-3xl font-bold ${
+                  darkMode ? 'text-white' : 'text-slate-900'
+                }`}
+              >
                 {t.aboutTitle}
               </h2>
-              <div className="space-y-4 text-lg leading-loose text-slate-600 dark:text-slate-300">
+              <div
+                className={`space-y-4 text-lg leading-loose ${
+                  darkMode ? 'text-slate-300' : 'text-slate-600'
+                }`}
+              >
                 {t.aboutText.map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
                 ))}
               </div>
             </section>
 
-            <section className="border-t border-slate-200 py-16 dark:border-slate-800">
-              <h2 className="mb-8 text-3xl font-bold text-slate-900 dark:text-white">{t.skillsTitle}</h2>
-              <SkillsSection />
+            <section className={`border-t py-16 ${darkMode ? 'border-slate-800' : 'border-slate-200'}`}>
+              <h2 className={`mb-8 text-3xl font-bold ${darkMode ? 'text-white' : 'text-slate-900'}`}>
+                {t.skillsTitle}
+              </h2>
+              <SkillsSection darkMode={darkMode} />
             </section>
 
-            <section className="border-t border-slate-200 py-16 dark:border-slate-800">
-              <h2 className="mb-8 text-3xl font-bold text-slate-900 dark:text-white">{t.projectsTitle}</h2>
+            <section className={`border-t py-16 ${darkMode ? 'border-slate-800' : 'border-slate-200'}`}>
+              <h2 className={`mb-8 text-3xl font-bold ${darkMode ? 'text-white' : 'text-slate-900'}`}>
+                {t.projectsTitle}
+              </h2>
               <div className="grid gap-8">
                 {t.projects.map((project, index) => (
                   <article
                     key={project.title}
-                    className="group relative rounded-2xl border border-slate-200 bg-slate-50 p-6 transition-colors hover:border-blue-500/50 dark:border-slate-800 dark:bg-slate-900"
+                    className={`group relative rounded-2xl border p-6 transition-colors hover:border-blue-500/50 ${
+                      darkMode
+                        ? 'border-slate-800 bg-slate-900'
+                        : 'border-slate-200 bg-slate-50'
+                    }`}
                   >
                     <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
                       <div>
                         <div className="flex items-center gap-2">
-                          <h3 className="text-xl font-bold text-slate-900 transition-colors group-hover:text-blue-500 dark:text-white">
+                          <h3
+                            className={`text-xl font-bold transition-colors group-hover:text-blue-500 ${
+                              darkMode ? 'text-white' : 'text-slate-900'
+                            }`}
+                          >
                             {project.title}
                           </h3>
                           {index === 0 && (
-                            <span className="rounded-full bg-green-100 px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-green-600 dark:bg-green-900/30 dark:text-green-400">
+                            <span
+                              className={`rounded-full px-2 py-1 text-[10px] font-bold uppercase tracking-wider ${
+                                darkMode
+                                  ? 'bg-green-900/30 text-green-400'
+                                  : 'bg-green-100 text-green-600'
+                              }`}
+                            >
                               Latest
                             </span>
                           )}
                         </div>
-                        <p className="mt-2 text-slate-500 dark:text-slate-400">{project.desc}</p>
+                        <p className={`mt-2 ${darkMode ? 'text-slate-400' : 'text-slate-500'}`}>
+                          {project.desc}
+                        </p>
                         <div className="mt-4 flex flex-wrap gap-2">
                           {project.tags.map((tag) => (
                             <span
                               key={tag}
-                              className="rounded bg-slate-200 px-2 py-1 font-mono text-xs text-slate-700 dark:bg-slate-800 dark:text-slate-300"
+                              className={`rounded px-2 py-1 font-mono text-xs ${
+                                darkMode
+                                  ? 'bg-slate-800 text-slate-300'
+                                  : 'bg-slate-200 text-slate-700'
+                              }`}
                             >
                               {tag}
                             </span>
@@ -414,10 +499,18 @@ export default function Portfolio() {
                           href={project.link}
                           target="_blank"
                           rel="noreferrer"
-                          className="flex h-12 w-12 items-center justify-center rounded-full bg-slate-200 transition-colors hover:bg-blue-100 hover:text-blue-600 dark:bg-slate-800 dark:hover:bg-blue-900/50"
+                          className={`flex h-12 w-12 items-center justify-center rounded-full transition-colors hover:text-blue-600 ${
+                            darkMode
+                              ? 'bg-slate-800 hover:bg-blue-900/50'
+                              : 'bg-slate-200 hover:bg-blue-100'
+                          }`}
                           aria-label={`Open ${project.title}`}
                         >
-                          <ExternalLink className="h-5 w-5 text-slate-500 transition-colors group-hover:text-blue-500" />
+                          <ExternalLink
+                            className={`h-5 w-5 transition-colors group-hover:text-blue-500 ${
+                              darkMode ? 'text-slate-300' : 'text-slate-500'
+                            }`}
+                          />
                         </a>
                       </div>
                     </div>
@@ -427,18 +520,34 @@ export default function Portfolio() {
             </section>
 
             <section className="py-20 text-center">
-              <h2 className="mb-6 text-3xl font-bold text-slate-900 dark:text-white">{t.contactTitle}</h2>
-              <p className="mx-auto mb-8 max-w-xl text-xl text-slate-600 dark:text-slate-400">{t.contactText}</p>
+              <h2 className={`mb-6 text-3xl font-bold ${darkMode ? 'text-white' : 'text-slate-900'}`}>
+                {t.contactTitle}
+              </h2>
+              <p
+                className={`mx-auto mb-8 max-w-xl text-xl ${
+                  darkMode ? 'text-slate-400' : 'text-slate-600'
+                }`}
+              >
+                {t.contactText}
+              </p>
               <a
                 href="mailto:contact@walteramador.com"
-                className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-8 py-4 text-lg font-bold text-white transition-transform hover:scale-105 dark:bg-white dark:text-slate-900"
+                className={`inline-flex items-center gap-2 rounded-full px-8 py-4 text-lg font-bold transition-transform hover:scale-105 ${
+                  darkMode ? 'bg-white text-slate-900' : 'bg-slate-900 text-white'
+                }`}
               >
                 <Mail className="h-5 w-5" />
                 Email Me
               </a>
             </section>
 
-            <footer className="border-t border-slate-200 py-8 text-center text-slate-500 dark:border-slate-800 dark:text-slate-400">
+            <footer
+              className={`border-t py-8 text-center ${
+                darkMode
+                  ? 'border-slate-800 text-slate-400'
+                  : 'border-slate-200 text-slate-500'
+              }`}
+            >
               <p>
                 &copy; {new Date().getFullYear()} Walter Amador. {t.rights}
               </p>
