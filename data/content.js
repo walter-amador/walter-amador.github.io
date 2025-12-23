@@ -12,7 +12,7 @@ export const content = {
     aboutText: [
       'I am a Full Stack Developer with a proven track record in building desktop, mobile, and web applications, as well as APIs. With strong expertise in AWS, I design scalable, cloud-native solutions that meet evolving business needs.',
       'I also have hands-on experience developing AI-powered systems, including computer vision applications, real-time image analysis, and data-driven solutions for security and monitoring use cases.',
-      'I thrive in collaborative environments, translating requirements into practical, high-quality solutions with a solution-oriented mindset and clear communication.',
+      'I thrive in collaborative environments, translating requirements into practical, high-quality solutions with a solution-oriented mindset and clear communication, and I have experience working with people from diverse nationalities and backgrounds, both remotely and in person.',
     ],
     skillsTitle: 'Technical Expertise',
     projectsTitle: 'Selected Work',
@@ -156,14 +156,14 @@ export const content = {
   es: {
     role: 'Líder Técnico y Desarrollador Full Stack',
     heroHeadline:
-      'Soluciones Escalables. Nativo de la Nube. Integración de IA.',
+      'Soluciones Escalables, Cloud-Native, IA Integrada',
     heroSub:
       'Traduciendo requisitos comerciales complejos en arquitecturas técnicas escalables y de alta calidad.',
     aboutTitle: 'Sobre Mí',
     aboutText: [
       'Soy un Desarrollador Full Stack con un historial comprobado en la creación de aplicaciones de escritorio, móviles y web, así como APIs. Con una sólida experiencia en AWS, diseño soluciones escalables y nativas de la nube que satisfacen las necesidades empresariales en evolución.',
       'También tengo experiencia práctica en el desarrollo de sistemas impulsados por IA, incluidas aplicaciones de visión por computadora, análisis de imágenes en tiempo real y soluciones basadas en datos para casos de uso de seguridad y monitoreo.',
-      'Prospero en entornos colaborativos, traduciendo requisitos en soluciones prácticas y de alta calidad con una mentalidad orientada a la solución y una comunicación clara.',
+      'Prospero en entornos colaborativos, traduciendo requisitos en soluciones prácticas y de alta calidad con una mentalidad orientada a la solución y una comunicación clara, y tengo experiencia trabajando con personas de distintas nacionalidades y orígenes, tanto de forma remota como presencial.',
     ],
     skillsTitle: 'Experiencia Técnica',
     projectsTitle: 'Proyectos Destacados',
@@ -313,7 +313,7 @@ export const content = {
     aboutText: [
       "Je suis un développeur Full Stack avec une expérience éprouvée dans la création d'applications de bureau, mobiles et web, ainsi que d'API. Avec une solide expertise en AWS, je conçois des solutions évolutives et cloud-native qui répondent aux besoins commerciaux en constante évolution.",
       "J'ai également une expérience pratique dans le développement de systèmes alimentés par l'IA, y compris des applications de vision par ordinateur, l'analyse d'images en temps réel et des solutions basées sur les données pour des cas d'utilisation de sécurité et de surveillance.",
-      "Je m'épanouis dans des environnements collaboratifs, traduisant les exigences en solutions pratiques et de haute qualité avec un esprit orienté vers les solutions et une communication claire.",
+      "Je m'épanouis dans des environnements collaboratifs, traduisant les exigences en solutions pratiques et de haute qualité avec un esprit orienté vers les solutions et une communication claire, et j'ai de l'expérience de travail avec des personnes de différentes nationalités et origines, aussi bien à distance qu'en présentiel.",
     ],
     skillsTitle: 'Expertise Technique',
     projectsTitle: 'Projets Sélectionnés',

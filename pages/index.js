@@ -7,6 +7,7 @@ import {
   Cloud,
   Code2,
   Cpu,
+  Database,
   ExternalLink,
   Github,
   Globe,
@@ -27,6 +28,74 @@ import {
   issuerMeta,
 } from '../lib/certificates-ui';
 import { EducationSection } from '../components/EducationSection';
+
+/**
+ * ANIMATED BACKGROUND COMPONENT
+ * Creates moving blurred orbs for a dynamic background effect.
+ */
+const AnimatedBackground = () => (
+  <div className='pointer-events-none fixed inset-0 z-0 overflow-hidden'>
+    <div className='absolute left-[-10%] top-[-10%] h-[50vw] w-[50vw] rounded-full bg-blue-500/20 blur-[80px] mix-blend-multiply animate-blob md:blur-[120px] dark:bg-blue-600/10 dark:mix-blend-screen' />
+    <div className='animation-delay-2000 absolute right-[-10%] top-[20%] h-[40vw] w-[40vw] rounded-full bg-purple-500/20 blur-[80px] mix-blend-multiply animate-blob md:blur-[120px] dark:bg-purple-600/10 dark:mix-blend-screen' />
+    <div className='animation-delay-4000 absolute bottom-[-20%] left-[20%] h-[60vw] w-[60vw] rounded-full bg-indigo-500/20 blur-[80px] mix-blend-multiply animate-blob md:blur-[120px] dark:bg-indigo-600/10 dark:mix-blend-screen' />
+  </div>
+);
+
+/**
+ * 3D TECH CONSTELLATION COMPONENT
+ * A 3D interactive element that rotates based on mouse position.
+ * Replaces the static icon/mascot.
+ */
+const TechConstellation = ({ mouseX, mouseY }) => {
+  const rotateY = (mouseX - 0.5) * 30;
+  const rotateX = (0.5 - mouseY) * 30;
+
+  const containerStyle = {
+    transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
+    transformStyle: 'preserve-3d',
+  };
+
+  return (
+    <div
+      className='relative flex h-64 w-64 items-center justify-center md:h-80 md:w-80'
+      style={containerStyle}
+      aria-hidden='true'
+    >
+      <div
+        className='absolute flex h-32 w-32 items-center justify-center rounded-2xl border border-blue-400/30 bg-gradient-to-br from-blue-600 to-indigo-700 text-white shadow-2xl backdrop-blur-sm'
+        style={{ transform: 'translateZ(40px)' }}
+      >
+        <Terminal className='h-16 w-16' />
+      </div>
+
+      <div
+        className='absolute -right-4 -top-4 flex h-16 w-16 items-center justify-center rounded-xl border border-slate-600 bg-slate-800 text-orange-400 shadow-xl dark:bg-slate-700'
+        style={{ transform: 'translateZ(80px)' }}
+      >
+        <Cloud className='h-8 w-8' />
+      </div>
+
+      <div
+        className='absolute -bottom-8 -left-2 flex h-20 w-20 items-center justify-center rounded-full border border-slate-200 bg-white text-purple-500 shadow-xl dark:border-slate-600 dark:bg-slate-800'
+        style={{ transform: 'translateZ(60px)' }}
+      >
+        <Cpu className='h-10 w-10' />
+      </div>
+
+      <div
+        className='absolute -right-12 top-1/2 flex h-14 w-14 -translate-y-1/2 items-center justify-center rounded-lg border border-slate-300 bg-slate-100 text-green-500 shadow-lg dark:border-slate-700 dark:bg-slate-900'
+        style={{ transform: 'translateZ(20px)' }}
+      >
+        <Database className='h-7 w-7' />
+      </div>
+
+      <div
+        className='pointer-events-none absolute inset-0 animate-spin-slow rounded-full border-2 border-dashed border-blue-500/20'
+        style={{ transform: 'translateZ(-20px) scale(1.4)' }}
+      />
+    </div>
+  );
+};
 
 function CertificatesSection({ darkMode, language, title, subtitle }) {
   const PAGE_SIZE = 6;
@@ -544,6 +613,7 @@ export default function Portfolio() {
   const [language, setLanguage] = useState('en');
   const [isScrolled, setIsScrolled] = useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
+  const [mousePos, setMousePos] = useState({ x: 0.5, y: 0.5 });
 
   const langMenuRef = useRef(null);
 
@@ -601,7 +671,52 @@ export default function Portfolio() {
             : 'bg-slate-50 text-slate-900'
         }`}
       >
-        <nav
+        <AnimatedBackground />
+
+        <style jsx global>{`
+          @keyframes blob {
+            0% {
+              transform: translate(0px, 0px) scale(1);
+            }
+            33% {
+              transform: translate(30px, -50px) scale(1.1);
+            }
+            66% {
+              transform: translate(-20px, 20px) scale(0.9);
+            }
+            100% {
+              transform: translate(0px, 0px) scale(1);
+            }
+          }
+
+          .animate-blob {
+            animation: blob 12s infinite;
+          }
+
+          .animation-delay-2000 {
+            animation-delay: 2s;
+          }
+
+          .animation-delay-4000 {
+            animation-delay: 4s;
+          }
+
+          @keyframes spin-slow {
+            from {
+              transform: rotate(0deg);
+            }
+            to {
+              transform: rotate(360deg);
+            }
+          }
+
+          .animate-spin-slow {
+            animation: spin-slow 18s linear infinite;
+          }
+        `}</style>
+
+        <div className='relative z-10'>
+          <nav
           className={`fixed top-0 z-50 w-full border-b transition-all duration-300 ${
             isScrolled
               ? darkMode
@@ -610,7 +725,7 @@ export default function Portfolio() {
               : 'border-transparent bg-transparent py-5'
           }`}
         >
-          <div className='mx-auto flex max-w-6xl items-center justify-between px-6'>
+          <div className='mx-auto flex max-w-7xl items-center justify-between px-6'>
             <div className='flex items-center gap-2 text-xl font-bold tracking-tight'>
               <span className='flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 font-bold text-white'>
                 W
@@ -714,58 +829,75 @@ export default function Portfolio() {
           </div>
         </nav>
 
-        <main className='px-6 pb-12 pt-24'>
+          <main className='px-6 pb-12 pt-24'>
           <div className='mx-auto max-w-4xl'>
-            <section className='py-20 md:py-32'>
-              <div className='space-y-6'>
-                <div
-                  className={`inline-flex items-center gap-2 rounded-full px-3 py-1 text-sm font-medium ${
-                    darkMode
-                      ? 'bg-blue-900/30 text-blue-300'
-                      : 'bg-blue-100 text-blue-700'
-                  }`}
-                >
-                  <Code2 className='h-4 w-4' />
-                  {t.role}
-                </div>
-                <h1
-                  className={`text-5xl font-extrabold leading-tight tracking-tight md:text-7xl ${
-                    darkMode ? 'text-white' : 'text-slate-900'
-                  }`}
-                >
-                  {t.heroHeadline}
-                </h1>
-                <p
-                  className={`max-w-2xl text-xl leading-relaxed ${
-                    darkMode ? 'text-slate-400' : 'text-slate-600'
-                  }`}
-                >
-                  {t.heroSub}
-                </p>
-
-                <div className='flex flex-wrap gap-4 pt-4'>
-                  <a
-                    href='https://linkedin.com/in/walter-amador'
-                    target='_blank'
-                    rel='noreferrer'
-                    className='inline-flex items-center gap-2 rounded-lg bg-blue-600 px-6 py-3 font-medium text-white shadow-lg shadow-blue-500/25 transition-colors hover:bg-blue-700'
-                  >
-                    <Linkedin className='h-5 w-5' />
-                    LinkedIn
-                  </a>
-                  <a
-                    href='https://github.com/walter-amador'
-                    target='_blank'
-                    rel='noreferrer'
-                    className={`inline-flex items-center gap-2 rounded-lg border px-6 py-3 font-medium transition-colors ${
+            <section className='py-10 md:py-16'>
+              <div
+                className='grid items-center gap-10 lg:grid-cols-2'
+                onMouseMove={(e) => {
+                  const rect = e.currentTarget.getBoundingClientRect();
+                  const x = (e.clientX - rect.left) / rect.width;
+                  const y = (e.clientY - rect.top) / rect.height;
+                  const clampedX = Math.max(0, Math.min(1, x));
+                  const clampedY = Math.max(0, Math.min(1, y));
+                  setMousePos({ x: clampedX, y: clampedY });
+                }}
+                onMouseLeave={() => setMousePos({ x: 0.5, y: 0.5 })}
+              >
+                <div className='space-y-6'>
+                  <div
+                    className={`inline-flex items-center gap-2 rounded-full px-3 py-1 text-sm font-medium ${
                       darkMode
-                        ? 'border-slate-700 bg-slate-800 text-white hover:border-slate-600'
-                        : 'border-slate-200 bg-white text-slate-900 hover:border-slate-300'
+                        ? 'bg-blue-900/30 text-blue-300'
+                        : 'bg-blue-100 text-blue-700'
                     }`}
                   >
-                    <Github className='h-5 w-5' />
-                    GitHub
-                  </a>
+                    <Code2 className='h-4 w-4' />
+                    {t.role}
+                  </div>
+                  <h1
+                    className={`text-5xl font-extrabold leading-tight tracking-tight md:text-6xl ${
+                      darkMode ? 'text-white' : 'text-slate-900'
+                    }`}
+                  >
+                    {t.heroHeadline}
+                  </h1>
+                  <p
+                    className={`max-w-2xl text-xl leading-relaxed ${
+                      darkMode ? 'text-slate-400' : 'text-slate-600'
+                    }`}
+                  >
+                    {t.heroSub}
+                  </p>
+
+                  <div className='flex flex-wrap gap-4 pt-4'>
+                    <a
+                      href='https://linkedin.com/in/walter-amador'
+                      target='_blank'
+                      rel='noreferrer'
+                      className='inline-flex items-center gap-2 rounded-lg bg-blue-600 px-6 py-3 font-medium text-white shadow-lg shadow-blue-500/25 transition-colors hover:bg-blue-700'
+                    >
+                      <Linkedin className='h-5 w-5' />
+                      LinkedIn
+                    </a>
+                    <a
+                      href='https://github.com/walter-amador'
+                      target='_blank'
+                      rel='noreferrer'
+                      className={`inline-flex items-center gap-2 rounded-lg border px-6 py-3 font-medium transition-colors ${
+                        darkMode
+                          ? 'border-slate-700 bg-slate-800 text-white hover:border-slate-600'
+                          : 'border-slate-200 bg-white text-slate-900 hover:border-slate-300'
+                      }`}
+                    >
+                      <Github className='h-5 w-5' />
+                      GitHub
+                    </a>
+                  </div>
+                </div>
+
+                <div className='flex justify-center lg:justify-end'>
+                  <TechConstellation mouseX={mousePos.x} mouseY={mousePos.y} />
                 </div>
               </div>
             </section>
@@ -977,7 +1109,8 @@ export default function Portfolio() {
               </p>
             </footer>
           </div>
-        </main>
+          </main>
+        </div>
       </div>
     </>
   );
