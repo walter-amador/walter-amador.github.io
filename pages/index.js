@@ -386,7 +386,7 @@ function CertificatesSection({ darkMode, language, title, subtitle }) {
                     </div>
                     <div
                       className={`text-xs ${
-                        darkMode ? 'text-slate-500' : 'text-slate-400'
+                        darkMode ? 'text-slate-300' : 'text-slate-400'
                       }`}
                     >
                       {locale.issuedPrefix}{' '}
@@ -650,6 +650,11 @@ export default function Portfolio() {
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
+
+  useEffect(() => {
+    if (typeof document === 'undefined') return;
+    document.documentElement.lang = language;
+  }, [language]);
 
   const t = content[language] ?? content.en;
 
@@ -1105,7 +1110,9 @@ export default function Portfolio() {
               }`}
             >
               <p>
-                &copy; {new Date().getFullYear()} Walter Amador. {t.rights}
+                &copy;{' '}
+                <span suppressHydrationWarning>{new Date().getFullYear()}</span>{' '}
+                Walter Amador. {t.rights}
               </p>
             </footer>
           </div>
