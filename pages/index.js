@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import React, { useEffect, useRef, useState } from 'react';
 import {
-  BadgeCheck,
   ChevronDown,
   ChevronLeft,
   ChevronRight,
@@ -13,7 +12,6 @@ import {
   Globe,
   Layers,
   Linkedin,
-  ListFilter,
   Mail,
   Moon,
   Search,
@@ -22,349 +20,13 @@ import {
 } from 'lucide-react';
 
 import { certificates as certificatesData } from '../data/certificates';
-
-/**
- * TEXT CONTENT DICTIONARY
- * Supports EN, ES, FR.
- */
-const content = {
-  en: {
-    role: 'Tech Lead & Full Stack Developer',
-    heroHeadline: 'Scalable Solutions. Cloud Native. AI Integrated.',
-    heroSub:
-      'Translating complex business requirements into high-quality, scalable technical architectures.',
-    aboutTitle: 'About Me',
-    aboutText: [
-      'I am a Full Stack Developer with a proven track record in building desktop, mobile, and web applications, as well as APIs. With strong expertise in AWS, I design scalable, cloud-native solutions that meet evolving business needs.',
-      'I also have hands-on experience developing AI-powered systems, including computer vision applications, real-time image analysis, and data-driven solutions for security and monitoring use cases.',
-      'I thrive in collaborative environments, translating requirements into practical, high-quality solutions with a solution-oriented mindset and clear communication.',
-    ],
-    skillsTitle: 'Technical Expertise',
-    projectsTitle: 'Selected Work',
-    certsTitle: 'Licenses & Certifications',
-    certsSubtitle: 'Search, filter, and sort my certificate archive.',
-    searchPlaceholder: 'Search…',
-    searchAria: 'Search certificates',
-    sortLabel: 'Sort',
-    sortAria: 'Sort certificates',
-    sortLatest: 'Latest',
-    sortOldest: 'Oldest',
-    certsIssuers: 'Issuers',
-    certsTopics: 'Topics',
-    issuedPrefix: 'Issued',
-    expiresLabel: 'Expires',
-    credentialIdLabel: 'Credential ID:',
-    pageLabel: 'Page',
-    ofLabel: 'of',
-    showingLabel: 'Showing',
-    prev: 'Prev',
-    next: 'Next',
-    latestBadge: 'Latest',
-    emailMe: 'Email Me',
-    toggleThemeAria: 'Toggle theme',
-    shownWord: 'shown',
-    totalWord: 'total',
-    openLabel: 'Open',
-    topicLabels: {
-      AI: 'AI',
-      Cloud: 'Cloud',
-      Frontend: 'Frontend',
-      Backend: 'Backend',
-      Data: 'Data',
-      Professional: 'Professional',
-      Communication: 'Communication',
-      Language: 'Language',
-      Academic: 'Academic',
-      General: 'General',
-    },
-    projects: [
-      {
-        title: 'Autonomous Mobile Robot Navigation',
-        desc: 'Vision-only navigation system on AGILEX LIMO using a single monocular camera. Features YOLOv8 traffic sign recognition, PD line following, and FSM-based obstacle avoidance without LiDAR.',
-        tags: ['Python', 'ROS2', 'YOLOv8', 'OpenCV'],
-        link: 'https://github.com/walter-amador/limo_robot_autonomous_navigation',
-      },
-      {
-        title: 'AI-Driven Security Monitoring System',
-        desc: 'Architected a real-time computer vision pipeline using Python and OpenCV deployed on AWS Edge devices for automated security analysis.',
-        tags: ['Python', 'OpenCV', 'AWS IoT', 'Edge Computing'],
-        link: 'https://github.com/walter-amador',
-      },
-      {
-        title: 'Cloud-Native Microservices Migration',
-        desc: 'Led the migration of a legacy monolithic application to a serverless architecture using Node.js and AWS Lambda, optimizing scalability and reducing costs.',
-        tags: ['AWS Lambda', 'Node.js', 'Terraform', 'Serverless'],
-        link: 'https://github.com/walter-amador',
-      },
-    ],
-    contactTitle: 'Get in Touch',
-    contactText:
-      'Open to discussing scalable architecture, cloud strategy, and AI integration.',
-    rights: 'All rights reserved.',
-  },
-  es: {
-    role: 'Líder Técnico y Desarrollador Full Stack',
-    heroHeadline:
-      'Soluciones Escalables. Nativo de la Nube. Integración de IA.',
-    heroSub:
-      'Traduciendo requisitos comerciales complejos en arquitecturas técnicas escalables y de alta calidad.',
-    aboutTitle: 'Sobre Mí',
-    aboutText: [
-      'Soy un Desarrollador Full Stack con un historial comprobado en la creación de aplicaciones de escritorio, móviles y web, así como APIs. Con una sólida experiencia en AWS, diseño soluciones escalables y nativas de la nube que satisfacen las necesidades empresariales en evolución.',
-      'También tengo experiencia práctica en el desarrollo de sistemas impulsados por IA, incluidas aplicaciones de visión por computadora, análisis de imágenes en tiempo real y soluciones basadas en datos para casos de uso de seguridad y monitoreo.',
-      'Prospero en entornos colaborativos, traduciendo requisitos en soluciones prácticas y de alta calidad con una mentalidad orientada a la solución y una comunicación clara.',
-    ],
-    skillsTitle: 'Experiencia Técnica',
-    projectsTitle: 'Proyectos Destacados',
-    certsTitle: 'Licencias y Certificaciones',
-    certsSubtitle: 'Busca, filtra y ordena mi archivo de certificaciones.',
-    searchPlaceholder: 'Buscar…',
-    searchAria: 'Buscar certificados',
-    sortLabel: 'Ordenar',
-    sortAria: 'Ordenar certificaciones',
-    sortLatest: 'Más reciente',
-    sortOldest: 'Más antiguo',
-    certsIssuers: 'Emisores',
-    certsTopics: 'Temas',
-    issuedPrefix: 'Emitido',
-    expiresLabel: 'Expira',
-    credentialIdLabel: 'ID de credencial:',
-    pageLabel: 'Página',
-    ofLabel: 'de',
-    showingLabel: 'Mostrando',
-    prev: 'Anterior',
-    next: 'Siguiente',
-    latestBadge: 'Más reciente',
-    emailMe: 'Envíame un correo',
-    toggleThemeAria: 'Cambiar tema',
-    shownWord: 'mostrados',
-    totalWord: 'total',
-    openLabel: 'Abrir',
-    topicLabels: {
-      AI: 'IA',
-      Cloud: 'Nube',
-      Frontend: 'Frontend',
-      Backend: 'Backend',
-      Data: 'Datos',
-      Professional: 'Profesional',
-      Communication: 'Comunicación',
-      Language: 'Idioma',
-      Academic: 'Académico',
-      General: 'General',
-    },
-    projects: [
-      {
-        title: 'Navegación Autónoma de Robot Móvil',
-        desc: 'Sistema de navegación basado en visión en AGILEX LIMO usando una sola cámara monocular. Incluye reconocimiento de señales con YOLOv8, seguimiento de línea PD y evasión de obstáculos FSM sin LiDAR.',
-        tags: ['Python', 'ROS2', 'YOLOv8', 'OpenCV'],
-        link: 'https://github.com/walter-amador/limo_robot_autonomous_navigation',
-      },
-    ],
-    contactTitle: 'Contacto',
-    contactText:
-      'Abierto a discutir arquitectura escalable, estrategia en la nube e integración de IA.',
-    rights: 'Todos los derechos reservados.',
-  },
-  fr: {
-    role: 'Tech Lead & Développeur Full Stack',
-    heroHeadline: 'Solutions Évolutives. Cloud Native. Intégration IA.',
-    heroSub:
-      'Traduire des exigences commerciales complexes en architectures techniques évolutives et de haute qualité.',
-    aboutTitle: 'À Propos',
-    aboutText: [
-      "Je suis un développeur Full Stack avec une expérience éprouvée dans la création d'applications de bureau, mobiles et web, ainsi que d'API. Avec une solide expertise en AWS, je conçois des solutions évolutives et cloud-native qui répondent aux besoins commerciaux en constante évolution.",
-      "J'ai également une expérience pratique dans le développement de systèmes alimentés par l'IA, y compris des applications de vision par ordinateur, l'analyse d'images en temps réel et des solutions basées sur les données pour des cas d'utilisation de sécurité et de surveillance.",
-      "Je m'épanouis dans des environnements collaboratifs, traduisant les exigences en solutions pratiques et de haute qualité avec un esprit orienté vers les solutions et une communication claire.",
-    ],
-    skillsTitle: 'Expertise Technique',
-    projectsTitle: 'Projets Sélectionnés',
-    certsTitle: 'Licences & Certifications',
-    certsSubtitle: 'Recherchez, filtrez et triez mes certifications.',
-    searchPlaceholder: 'Rechercher…',
-    searchAria: 'Rechercher les certifications',
-    sortLabel: 'Trier',
-    sortAria: 'Trier les certifications',
-    sortLatest: 'Plus récent',
-    sortOldest: 'Plus ancien',
-    certsIssuers: 'Émetteurs',
-    certsTopics: 'Sujets',
-    issuedPrefix: 'Délivré',
-    expiresLabel: 'Expire',
-    credentialIdLabel: "ID de certification:",
-    pageLabel: 'Page',
-    ofLabel: 'de',
-    showingLabel: 'Affichés',
-    prev: 'Préc.',
-    next: 'Suiv.',
-    latestBadge: 'Plus récent',
-    emailMe: 'Envoyer un e-mail',
-    toggleThemeAria: 'Changer le thème',
-    shownWord: 'affichés',
-    totalWord: 'total',
-    openLabel: 'Ouvrir',
-    topicLabels: {
-      AI: 'IA',
-      Cloud: 'Cloud',
-      Frontend: 'Frontend',
-      Backend: 'Backend',
-      Data: 'Données',
-      Professional: 'Professionnel',
-      Communication: 'Communication',
-      Language: 'Langue',
-      Academic: 'Académique',
-      General: 'Général',
-    },
-    projects: [
-      {
-        title: 'Navigation Autonome de Robot Mobile',
-        desc: "Système de navigation basé sur la vision sur AGILEX LIMO utilisant une seule caméra monoculaire. Intègre la reconnaissance de panneaux YOLOv8, le suivi de ligne PD et l'évitement d'obstacles FSM sans LiDAR.",
-        tags: ['Python', 'ROS2', 'YOLOv8', 'OpenCV'],
-        link: 'https://github.com/walter-amador/limo_robot_autonomous_navigation',
-      },
-      {
-        title: 'Système de Surveillance de Sécurité IA',
-        desc: "Conception d'un pipeline de vision par ordinateur en temps réel utilisant Python et OpenCV déployé sur des dispositifs AWS Edge pour une analyse de sécurité automatisée.",
-        tags: ['Python', 'OpenCV', 'AWS IoT', 'Edge Computing'],
-        link: 'https://github.com/walter-amador',
-      },
-      {
-        title: 'Migration de Microservices Cloud-Native',
-        desc: "Direction de la migration d'une application monolithique héritée vers une architecture serverless utilisant Node.js et AWS Lambda, optimisant l'évolutivité et réduisant les coûts.",
-        tags: ['AWS Lambda', 'Node.js', 'Terraform', 'Serverless'],
-        link: 'https://github.com/walter-amador',
-      },
-    ],
-    contactTitle: 'Contactez-moi',
-    contactText:
-      "Ouvert à discuter d'architecture évolutive, de stratégie cloud et d'intégration IA.",
-    rights: 'Tous droits réservés.',
-  },
-};
-
-function formatMonthYear(dateIso, language) {
-  if (!dateIso) return '';
-  const d = new Date(dateIso);
-  if (Number.isNaN(d.getTime())) return '';
-  const locale = language === 'es' ? 'es' : language === 'fr' ? 'fr' : 'en';
-  return new Intl.DateTimeFormat(locale, {
-    month: 'short',
-    year: 'numeric',
-  }).format(d);
-}
-
-function deriveTopics(cert) {
-  const title = (cert.title ?? '').toLowerCase();
-  const skills = (cert.skills ?? []).join(' ').toLowerCase();
-  const blob = `${title} ${skills}`;
-
-  const topics = new Set();
-  if (
-    blob.match(
-      /ai|artificial|generative|prompt|copilot|computer vision|opencv|yolo/
-    )
-  ) {
-    topics.add('AI');
-  }
-  if (
-    blob.match(/aws|cloud|serverless|lambda|docker|devops|ci\/cd|terraform/)
-  ) {
-    topics.add('Cloud');
-  }
-  if (blob.match(/react|next\.js|frontend|dom|webpack|web design|tailwind/)) {
-    topics.add('Frontend');
-  }
-  if (blob.match(/node|express|api|backend|passport|jwt|auth/)) {
-    topics.add('Backend');
-  }
-  if (
-    blob.match(
-      /postgres|mongo|database|bases de datos|data structures|estructuras de datos/
-    )
-  ) {
-    topics.add('Data');
-  }
-  if (
-    blob.match(/scrum|user stories|historias de usuario|remote|teletrabajo/)
-  ) {
-    topics.add('Professional');
-  }
-  if (blob.match(/email|communication|etiquette/)) {
-    topics.add('Communication');
-  }
-  if (blob.match(/english|language|proficiency/)) {
-    topics.add('Language');
-  }
-  if (blob.match(/academic|qualifications|education/)) {
-    topics.add('Academic');
-  }
-
-  // Ensure every certificate has at least one topic.
-  if (topics.size === 0) topics.add('General');
-  return Array.from(topics);
-}
-
-function issuerMeta(issuer) {
-  const normalized = issuer ?? 'Unknown';
-  const map = {
-    Udemy: {
-      label: 'Udemy',
-      initials: 'U',
-      icon: <BadgeCheck className='h-4 w-4' />,
-      light: 'bg-purple-100 text-purple-700',
-      dark: 'bg-purple-900/30 text-purple-300',
-    },
-    Platzi: {
-      label: 'Platzi',
-      initials: 'P',
-      icon: <Terminal className='h-4 w-4' />,
-      light: 'bg-green-100 text-green-700',
-      dark: 'bg-green-900/30 text-green-300',
-    },
-    Coursera: {
-      label: 'Coursera',
-      initials: 'C',
-      icon: <Layers className='h-4 w-4' />,
-      light: 'bg-indigo-100 text-indigo-700',
-      dark: 'bg-indigo-900/30 text-indigo-300',
-    },
-    MathWorks: {
-      label: 'MathWorks',
-      initials: 'MW',
-      icon: <Cpu className='h-4 w-4' />,
-      light: 'bg-red-100 text-red-700',
-      dark: 'bg-red-900/30 text-red-300',
-    },
-    'World Education Services': {
-      label: 'World Education Services',
-      initials: 'WES',
-      icon: <Globe className='h-4 w-4' />,
-      light: 'bg-slate-200 text-slate-700',
-      dark: 'bg-slate-800 text-slate-200',
-    },
-    'Duolingo English Test': {
-      label: 'Duolingo English Test',
-      initials: 'DET',
-      icon: <BadgeCheck className='h-4 w-4' />,
-      light: 'bg-amber-100 text-amber-700',
-      dark: 'bg-amber-900/30 text-amber-300',
-    },
-  };
-
-  return (
-    map[normalized] ?? {
-      label: normalized,
-      initials: normalized
-        .split(' ')
-        .slice(0, 2)
-        .map((s) => s[0])
-        .join('')
-        .toUpperCase(),
-      icon: <BadgeCheck className='h-4 w-4' />,
-      light: 'bg-slate-200 text-slate-700',
-      dark: 'bg-slate-800 text-slate-200',
-    }
-  );
-}
+import { content } from '../data/content';
+import {
+  deriveTopics,
+  formatMonthYear,
+  issuerMeta,
+} from '../lib/certificates-ui';
+import { EducationSection } from '../components/EducationSection';
 
 function CertificatesSection({ darkMode, language, title, subtitle }) {
   const PAGE_SIZE = 6;
@@ -433,13 +95,7 @@ function CertificatesSection({ darkMode, language, title, subtitle }) {
     });
 
     return result;
-  }, [
-    allCertificates,
-    query,
-    selectedIssuers,
-    selectedTopics,
-    sort,
-  ]);
+  }, [allCertificates, query, selectedIssuers, selectedTopics, sort]);
 
   const pageCount = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const clampedPage = Math.min(page, pageCount - 1);
@@ -450,12 +106,7 @@ function CertificatesSection({ darkMode, language, title, subtitle }) {
 
   useEffect(() => {
     setPage(0);
-  }, [
-    query,
-    selectedIssuers,
-    selectedTopics,
-    sort,
-  ]);
+  }, [query, selectedIssuers, selectedTopics, sort]);
 
   useEffect(() => {
     if (page !== clampedPage) setPage(clampedPage);
@@ -505,7 +156,8 @@ function CertificatesSection({ darkMode, language, title, subtitle }) {
               : 'bg-slate-100 text-slate-700'
           }`}
         >
-          {filtered.length} {locale.shownWord} · {allCertificates.length} {locale.totalWord}
+          {filtered.length} {locale.shownWord} · {allCertificates.length}{' '}
+          {locale.totalWord}
         </div>
       </div>
 
@@ -668,7 +320,8 @@ function CertificatesSection({ darkMode, language, title, subtitle }) {
                         darkMode ? 'text-slate-500' : 'text-slate-400'
                       }`}
                     >
-                      {locale.issuedPrefix} {formatMonthYear(c.issuedOn, language)}
+                      {locale.issuedPrefix}{' '}
+                      {formatMonthYear(c.issuedOn, language)}
                     </div>
                   </div>
                 </div>
@@ -680,7 +333,10 @@ function CertificatesSection({ darkMode, language, title, subtitle }) {
                         ? 'bg-amber-900/30 text-amber-300'
                         : 'bg-amber-100 text-amber-700'
                     }`}
-                    title={`${locale.expiresLabel} ${formatMonthYear(c.expiresOn, language)}`}
+                    title={`${locale.expiresLabel} ${formatMonthYear(
+                      c.expiresOn,
+                      language
+                    )}`}
                   >
                     {locale.expiresLabel}
                   </span>
@@ -756,7 +412,9 @@ function CertificatesSection({ darkMode, language, title, subtitle }) {
             darkMode ? 'text-slate-400' : 'text-slate-600'
           }`}
         >
-          {locale.pageLabel} {clampedPage + 1} {locale.ofLabel} {pageCount} · {locale.showingLabel} {pageItems.length} {locale.ofLabel} {filtered.length}
+          {locale.pageLabel} {clampedPage + 1} {locale.ofLabel} {pageCount} ·{' '}
+          {locale.showingLabel} {pageItems.length} {locale.ofLabel}{' '}
+          {filtered.length}
         </div>
 
         <div className='flex items-center gap-2'>
@@ -805,6 +463,7 @@ function SkillsSection({ darkMode }) {
         'Electron.js',
         'Tailwind CSS',
         'TypeScript',
+        'JavaScript',
       ],
     },
     {
@@ -827,7 +486,7 @@ function SkillsSection({ darkMode }) {
       title: 'AI & Data',
       icon: <Cpu className='h-6 w-6 text-purple-500' />,
       skills: [
-        'TensorFlow',
+        'Ultralytics YOLO',
         'PyTorch',
         'OpenCV',
         'Computer Vision',
@@ -1216,28 +875,53 @@ export default function Portfolio() {
                         </div>
                       </div>
                       <div className='shrink-0'>
-                        <a
-                          href={project.link}
-                          target='_blank'
-                          rel='noreferrer'
-                          className={`flex h-12 w-12 items-center justify-center rounded-full transition-colors hover:text-blue-600 ${
-                            darkMode
-                              ? 'bg-slate-800 hover:bg-blue-900/50'
-                              : 'bg-slate-200 hover:bg-blue-100'
-                          }`}
-                          aria-label={`${t.openLabel} ${project.title}` }
-                        >
-                          <ExternalLink
-                            className={`h-5 w-5 transition-colors group-hover:text-blue-500 ${
-                              darkMode ? 'text-slate-300' : 'text-slate-500'
-                            }`}
-                          />
-                        </a>
+                        {(() => {
+                          const links = Array.isArray(project.links)
+                            ? project.links
+                            : project.link
+                              ? [project.link]
+                              : [];
+
+                          return (
+                            <div className='flex items-center gap-2'>
+                              {links.map((href, i) => (
+                                <a
+                                  key={href}
+                                  href={href}
+                                  target='_blank'
+                                  rel='noreferrer'
+                                  className={`flex h-12 w-12 items-center justify-center rounded-full transition-colors hover:text-blue-600 ${
+                                    darkMode
+                                      ? 'bg-slate-800 hover:bg-blue-900/50'
+                                      : 'bg-slate-200 hover:bg-blue-100'
+                                  }`}
+                                  aria-label={`${t.openLabel} ${project.title} (${i + 1})`}
+                                >
+                                  <ExternalLink
+                                    className={`h-5 w-5 transition-colors group-hover:text-blue-500 ${
+                                      darkMode
+                                        ? 'text-slate-300'
+                                        : 'text-slate-500'
+                                    }`}
+                                  />
+                                </a>
+                              ))}
+                            </div>
+                          );
+                        })()}
                       </div>
                     </div>
                   </article>
                 ))}
               </div>
+            </section>
+
+            <section
+              className={`border-t py-16 ${
+                darkMode ? 'border-slate-800' : 'border-slate-200'
+              }`}
+            >
+              <EducationSection darkMode={darkMode} t={t} />
             </section>
 
             <section
