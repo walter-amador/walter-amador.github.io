@@ -7,7 +7,7 @@ export const content = {
     role: 'Tech Lead & Full Stack Developer',
     heroHeadline: 'Scalable Solutions. Cloud Native. AI Integrated.',
     heroSub:
-      'Translating complex business requirements into high-quality, scalable technical architectures.',
+      'Translating complex business requirements into high-quality, scalable technical architectures. AWS Certified.',
     aboutTitle: 'About Me',
     aboutText: [
       'I am a Full Stack Developer with a proven track record in building desktop, mobile, and web applications, as well as APIs. With strong expertise in AWS, I design scalable, cloud-native solutions that meet evolving business needs.',
@@ -191,7 +191,7 @@ export const content = {
     role: 'Líder Técnico y Desarrollador Full Stack',
     heroHeadline: 'Soluciones Escalables, Cloud-Native, IA Integrada',
     heroSub:
-      'Traduciendo requisitos comerciales complejos en arquitecturas técnicas escalables y de alta calidad.',
+      'Traduciendo requisitos comerciales complejos en arquitecturas técnicas escalables y de alta calidad. Certificado por AWS.',
     aboutTitle: 'Sobre Mí',
     aboutText: [
       'Soy un Desarrollador Full Stack con un historial comprobado en la creación de aplicaciones de escritorio, móviles y web, así como APIs. Con una sólida experiencia en AWS, diseño soluciones escalables y nativas de la nube que satisfacen las necesidades empresariales en evolución.',
@@ -375,7 +375,7 @@ export const content = {
     role: 'Tech Lead & Développeur Full Stack',
     heroHeadline: 'Solutions Évolutives. Cloud Native. Intégration IA.',
     heroSub:
-      'Traduire des exigences commerciales complexes en architectures techniques évolutives et de haute qualité.',
+      'Traduire des exigences commerciales complexes en architectures techniques évolutives et de haute qualité. Certifié AWS.',
     aboutTitle: 'À Propos',
     aboutText: [
       "Je suis un développeur Full Stack avec une expérience éprouvée dans la création d'applications de bureau, mobiles et web, ainsi que d'API. Avec une solide expertise en AWS, je conçois des solutions évolutives et cloud-native qui répondent aux besoins commerciaux en constante évolution.",
