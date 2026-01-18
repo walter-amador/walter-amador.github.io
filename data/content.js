@@ -15,9 +15,41 @@ export const content = {
       'I thrive in collaborative environments, translating requirements into practical, high-quality solutions with a solution-oriented mindset and clear communication, and I have experience working with people from diverse nationalities and backgrounds, both remotely and in person.',
     ],
     skillsTitle: 'Technical Expertise',
+    experienceTitle: 'Professional Experience',
+    experienceSubtitle:
+      '3+ years delivering scalable, production-grade solutions',
+    experience: [
+      {
+        company: 'Sumadi',
+        role: 'Technical Lead',
+        period: 'Jun 2025 - Present',
+        location: 'Ontario, Canada · Remote',
+        type: 'Contract Full-time',
+        highlights: [
+          'Lead a team of 6 engineers, owning technical execution and delivery across multiple product streams',
+          'Guide architecture and development of cloud-native, web, desktop, mobile, and browser extension solutions',
+          'Consistently deliver all committed and additional out-of-scope projects on time with quality',
+          'Increase developer productivity through AI-enabled tooling, automation, and scalable engineering practices',
+        ],
+      },
+      {
+        company: 'Sumadi',
+        role: 'Full Stack Developer',
+        period: 'Aug 2022 - Jun 2025',
+        location: 'Remote',
+        type: 'Full-time',
+        highlights: [
+          'Designed and developed highly scalable cloud-based solutions optimized for high-concurrency and high-availability',
+          'Achieved up to 8× cost reduction compared to equivalent AWS AI services while maintaining functionality and quality',
+          'Built and scaled real-time chat and video calling services supporting thousands of concurrent users',
+          'Spearheaded scalability enhancements resulting in 70% increase in concurrent user capacity',
+        ],
+      },
+    ],
     projectsTitle: 'Public Projects',
     projectsNoteLabel: 'Note:',
-    projectsNote: 'The majority of solutions and projects I\'ve led and developed are private, proprietary work for clients and companies. The projects showcased here represent a selection of public work that demonstrates my technical capabilities and approach to problem-solving.',
+    projectsNote:
+      "The majority of solutions and projects I've led and developed are private, proprietary work for clients and companies. The projects showcased here represent a selection of public work that demonstrates my technical capabilities and approach to problem-solving.",
     educationTitle: 'Education',
     educationSubtitle: 'Graduate and undergraduate studies (condensed).',
     educationLabels: {
@@ -148,7 +180,7 @@ export const content = {
           'https://www.laprensa.hn/economia/ficohsa-y-oracle-finalizan-primer-hackathon-regional-de-innovacion-DB3300342',
           'https://www.youtube.com/watch?v=ORUkoVoWm7o&t=1753s',
         ],
-      }
+      },
     ],
     contactTitle: 'Get in Touch',
     contactText:
@@ -157,8 +189,7 @@ export const content = {
   },
   es: {
     role: 'Líder Técnico y Desarrollador Full Stack',
-    heroHeadline:
-      'Soluciones Escalables, Cloud-Native, IA Integrada',
+    heroHeadline: 'Soluciones Escalables, Cloud-Native, IA Integrada',
     heroSub:
       'Traduciendo requisitos comerciales complejos en arquitecturas técnicas escalables y de alta calidad.',
     aboutTitle: 'Sobre Mí',
@@ -168,9 +199,41 @@ export const content = {
       'Prospero en entornos colaborativos, traduciendo requisitos en soluciones prácticas y de alta calidad con una mentalidad orientada a la solución y una comunicación clara, y tengo experiencia trabajando con personas de distintas nacionalidades y orígenes, tanto de forma remota como presencial.',
     ],
     skillsTitle: 'Experiencia Técnica',
+    experienceTitle: 'Experiencia Profesional',
+    experienceSubtitle:
+      'Más de 3 años entregando soluciones escalables de nivel producción',
+    experience: [
+      {
+        company: 'Sumadi',
+        role: 'Líder Técnico',
+        period: 'Jun 2025 - Presente',
+        location: 'Ontario, Canadá · Remoto',
+        type: 'Contrato Tiempo completo',
+        highlights: [
+          'Lidero un equipo de 6 ingenieros, gestionando la ejecución técnica y entrega en múltiples líneas de producto',
+          'Guío la arquitectura y desarrollo de soluciones cloud-native, web, escritorio, móvil y extensiones de navegador',
+          'Entrego consistentemente todos los proyectos comprometidos y adicionales a tiempo con calidad',
+          'Aumento la productividad del equipo mediante herramientas con IA, automatización y prácticas de ingeniería escalables',
+        ],
+      },
+      {
+        company: 'Sumadi',
+        role: 'Desarrollador Full Stack',
+        period: 'Ago 2022 - Jun 2025',
+        location: 'Remoto',
+        type: 'Tiempo completo',
+        highlights: [
+          'Diseñé y desarrollé soluciones en la nube altamente escalables optimizadas para alta concurrencia y disponibilidad',
+          'Logré hasta 8× de reducción de costos en comparación con servicios equivalentes de AWS AI manteniendo funcionalidad y calidad',
+          'Construí y escalé servicios de chat en tiempo real y videollamadas soportando miles de usuarios concurrentes',
+          'Lideré mejoras de escalabilidad resultando en un aumento del 70% en la capacidad de usuarios concurrentes',
+        ],
+      },
+    ],
     projectsTitle: 'Proyectos Públicos',
     projectsNoteLabel: 'Nota:',
-    projectsNote: 'La mayoría de las soluciones y proyectos que he liderado y desarrollado son trabajos privados y propietarios para clientes y empresas. Los proyectos presentados aquí representan una selección de trabajos públicos que demuestran mis capacidades técnicas y mi enfoque para resolver problemas.',
+    projectsNote:
+      'La mayoría de las soluciones y proyectos que he liderado y desarrollado son trabajos privados y propietarios para clientes y empresas. Los proyectos presentados aquí representan una selección de trabajos públicos que demuestran mis capacidades técnicas y mi enfoque para resolver problemas.',
     educationTitle: 'Educación',
     educationSubtitle: 'Estudios de posgrado y pregrado (resumen).',
     educationLabels: {
@@ -320,9 +383,41 @@ export const content = {
       "Je m'épanouis dans des environnements collaboratifs, traduisant les exigences en solutions pratiques et de haute qualité avec un esprit orienté vers les solutions et une communication claire, et j'ai de l'expérience de travail avec des personnes de différentes nationalités et origines, aussi bien à distance qu'en présentiel.",
     ],
     skillsTitle: 'Expertise Technique',
+    experienceTitle: 'Expérience Professionnelle',
+    experienceSubtitle:
+      'Plus de 3 ans à fournir des solutions évolutives de niveau production',
+    experience: [
+      {
+        company: 'Sumadi',
+        role: 'Responsable Technique',
+        period: 'Juin 2025 - Présent',
+        location: 'Ontario, Canada · À distance',
+        type: 'Contrat Temps plein',
+        highlights: [
+          "Équipe de 6 ingénieurs, responsable de l'exécution technique et de la livraison sur plusieurs flux de produits",
+          "Guide l'architecture et le développement de solutions cloud-native, web, desktop, mobile et extensions de navigateur",
+          'Livre systématiquement tous les projets engagés et supplémentaires à temps avec qualité',
+          "Augmente la productivité grâce à des outils IA, automatisation et pratiques d'ingénierie évolutives",
+        ],
+      },
+      {
+        company: 'Sumadi',
+        role: 'Développeur Full Stack',
+        period: 'Août 2022 - Juin 2025',
+        location: 'À distance',
+        type: 'Temps plein',
+        highlights: [
+          'Conçu et développé des solutions cloud hautement évolutives optimisées pour haute concurrence et disponibilité',
+          "Réduction des coûts jusqu'à 8× par rapport aux services équivalents AWS AI tout en maintenant fonctionnalité et qualité",
+          "Construit et mis à l'échelle des services de chat en temps réel et vidéo supportant des milliers d'utilisateurs simultanés",
+          "Améliorations de l'évolutivité augmentant la capacité d'utilisateurs simultanés de 70%",
+        ],
+      },
+    ],
     projectsTitle: 'Projets Publics',
     projectsNoteLabel: 'Remarque :',
-    projectsNote: 'La majorité des solutions et projets que j\'ai dirigés et développés sont des travaux privés et propriétaires pour des clients et des entreprises. Les projets présentés ici représentent une sélection de travaux publics qui démontrent mes compétences techniques et mon approche de résolution de problèmes.',
+    projectsNote:
+      "La majorité des solutions et projets que j'ai dirigés et développés sont des travaux privés et propriétaires pour des clients et des entreprises. Les projets présentés ici représentent une sélection de travaux publics qui démontrent mes compétences techniques et mon approche de résolution de problèmes.",
     educationTitle: 'Formation',
     educationSubtitle: 'Études supérieures et de premier cycle (résumé).',
     educationLabels: {
@@ -337,7 +432,7 @@ export const content = {
         dates: 'Jan 2025 – Déc 2026',
         countryFlag: '🇨🇦',
         description:
-          "Axé sur la science computationnelle appliquée et les systèmes intelligents : machine learning/deep learning, robotique, IoT, fouille de données, méthodes de recherche, hacking éthique et statistiques.",
+          'Axé sur la science computationnelle appliquée et les systèmes intelligents : machine learning/deep learning, robotique, IoT, fouille de données, méthodes de recherche, hacking éthique et statistiques.',
         skills: [
           'Python',
           'JavaScript',
@@ -356,7 +451,7 @@ export const content = {
         dates: 'Jan 2019 – Déc 2022',
         countryFlag: '🇭🇳',
         description:
-          "Solide base en informatique et ingénierie, avec un accent sur le développement logiciel, les bases de données et le leadership via l’engagement académique.",
+          'Solide base en informatique et ingénierie, avec un accent sur le développement logiciel, les bases de données et le leadership via l’engagement académique.',
         wesCredlyBadgeId: 'd03e19e7-9243-4cd6-81b6-e73cec47bc08',
         highlights: [
           'Crédits totaux (semestre) : 154.5',
@@ -418,7 +513,7 @@ export const content = {
       {
         title:
           'Évaluation comparative de la détection géométrique (AprilTag) et de la détection basée sur YOLO pour la navigation urbaine',
-        desc: "Projet de vision par ordinateur comparant la détection géométrique via AprilTag et un modèle YOLOv8 affiné pour la reconnaissance de panneaux de signalisation en temps réel, en analysant la précision, la robustesse, la latence et la cohérence des décisions en navigation urbaine.",
+        desc: 'Projet de vision par ordinateur comparant la détection géométrique via AprilTag et un modèle YOLOv8 affiné pour la reconnaissance de panneaux de signalisation en temps réel, en analysant la précision, la robustesse, la latence et la cohérence des décisions en navigation urbaine.',
         tags: [
           'Vision par ordinateur',
           "Détection d'objets",
@@ -453,7 +548,7 @@ export const content = {
           'https://www.laprensa.hn/economia/ficohsa-y-oracle-finalizan-primer-hackathon-regional-de-innovacion-DB3300342',
           'https://www.youtube.com/watch?v=ORUkoVoWm7o&t=1753s',
         ],
-      }
+      },
     ],
     contactTitle: 'Contactez-moi',
     contactText:

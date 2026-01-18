@@ -975,6 +975,94 @@ export default function Portfolio() {
                 <SkillsSection darkMode={darkMode} />
               </section>
 
+              {/* Work Experience */}
+              <section
+                className={`border-t py-16 ${
+                  darkMode ? 'border-slate-800' : 'border-slate-200'
+                }`}
+              >
+                <h2
+                  className={`mb-3 text-3xl font-bold ${
+                    darkMode ? 'text-white' : 'text-slate-900'
+                  }`}
+                >
+                  {t.experienceTitle}
+                </h2>
+                <p
+                  className={`mb-8 ${
+                    darkMode ? 'text-slate-400' : 'text-slate-600'
+                  }`}
+                >
+                  {t.experienceSubtitle}
+                </p>
+
+                <div className='space-y-8'>
+                  {t.experience.map((exp, index) => (
+                    <article
+                      key={`${exp.company}-${index}`}
+                      className={`rounded-2xl border p-6 ${
+                        darkMode
+                          ? 'border-slate-700 bg-slate-800/50'
+                          : 'border-slate-200 bg-white'
+                      }`}
+                    >
+                      <div className='mb-4 flex flex-col gap-2 md:flex-row md:items-start md:justify-between'>
+                        <div>
+                          <h3
+                            className={`text-xl font-bold ${
+                              darkMode ? 'text-white' : 'text-slate-900'
+                            }`}
+                          >
+                            {exp.role}
+                          </h3>
+                          <p
+                            className={`mt-1 font-semibold ${
+                              darkMode ? 'text-blue-400' : 'text-blue-600'
+                            }`}
+                          >
+                            {exp.company}
+                          </p>
+                        </div>
+                        <div className='text-right'>
+                          <div
+                            className={`text-sm font-medium ${
+                              darkMode ? 'text-slate-300' : 'text-slate-700'
+                            }`}
+                          >
+                            {exp.period}
+                          </div>
+                          <div
+                            className={`text-xs ${
+                              darkMode ? 'text-slate-400' : 'text-slate-500'
+                            }`}
+                          >
+                            {exp.location}
+                          </div>
+                        </div>
+                      </div>
+
+                      <ul className='space-y-2'>
+                        {exp.highlights.map((highlight, i) => (
+                          <li
+                            key={i}
+                            className={`flex gap-3 text-sm leading-relaxed ${
+                              darkMode ? 'text-slate-300' : 'text-slate-600'
+                            }`}
+                          >
+                            <span
+                              className={`mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full ${
+                                darkMode ? 'bg-blue-400' : 'bg-blue-600'
+                              }`}
+                            />
+                            <span>{highlight}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </article>
+                  ))}
+                </div>
+              </section>
+
               <section
                 className={`border-t py-16 ${
                   darkMode ? 'border-slate-800' : 'border-slate-200'
