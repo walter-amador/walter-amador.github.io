@@ -731,7 +731,7 @@ export default function Portfolio() {
           }`}
         >
           <div className='mx-auto flex max-w-7xl items-center justify-between px-6'>
-            <div className='flex items-center gap-2 text-xl font-bold tracking-tight'>
+            <div className='flex items-center gap-3 text-xl font-bold tracking-tight'>
               <span className='flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 font-bold text-white'>
                 W
               </span>
@@ -898,6 +898,25 @@ export default function Portfolio() {
                       <Github className='h-5 w-5' />
                       GitHub
                     </a>
+                    <a
+                      href='https://www.credly.com/badges/586c3a24-f1e1-4aa1-a155-0f68fb893af6/public_url'
+                      target='_blank'
+                      rel='noreferrer'
+                      className='group relative ml-2 hidden md:block'
+                      title='AWS Certified AI Practitioner'
+                    >
+                      <div className='relative h-12 w-12 transition-transform hover:scale-110'>
+                        <img
+                          src='/aws-certified-ai-practitioner.png'
+                          alt='AWS Certified AI Practitioner'
+                          className='h-full w-full object-contain drop-shadow-md'
+                        />
+                        <div className='pointer-events-none absolute left-1/2 top-0 h-3 w-3 -translate-x-1/2'>
+                          <div className='animate-shine h-full w-full rounded-full bg-gradient-radial from-white via-blue-200 to-transparent opacity-0 blur-sm' 
+                              style={{ transformOrigin: '50% 24px' }} />
+                        </div>
+                      </div>
+                    </a>
                   </div>
                 </div>
 
@@ -957,6 +976,21 @@ export default function Portfolio() {
               >
                 {t.projectsTitle}
               </h2>
+              
+              {t.projectsNote && (
+                <div
+                  className={`mb-8 rounded-xl border-l-4 p-4 ${
+                    darkMode
+                      ? 'border-blue-500 bg-blue-950/30 text-slate-300'
+                      : 'border-blue-500 bg-blue-50 text-slate-700'
+                  }`}
+                >
+                  <p className='text-sm leading-relaxed'>
+                    💼 <strong>{t.projectsNoteLabel}</strong> {t.projectsNote}
+                  </p>
+                </div>
+              )}
+
               <div className='grid gap-8'>
                 {t.projects.map((project, index) => (
                   <article

@@ -3,6 +3,14 @@
 
 export const certificates = [
   {
+    id: 'aws-certified-ai-practitioner-2026-01',
+    title: 'AWS Certified AI Practitioner AIF-C01',
+    issuer: 'Amazon Web Services',
+    issuedOn: '2026-01-18',
+    credentialId: '586c3a24-f1e1-4aa1-a155-0f68fb893af6',
+    skills: ['AWS', 'Generative AI', 'Artificial Intelligence', 'Cloud Computing'],
+  },
+  {
     id: 'udemy-aws-ai-practitioner-2026-01',
     title: 'Ultimate AWS Certified AI Practitioner AIF-C01',
     issuer: 'Udemy',

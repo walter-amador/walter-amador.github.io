@@ -15,7 +15,9 @@ export const content = {
       'I thrive in collaborative environments, translating requirements into practical, high-quality solutions with a solution-oriented mindset and clear communication, and I have experience working with people from diverse nationalities and backgrounds, both remotely and in person.',
     ],
     skillsTitle: 'Technical Expertise',
-    projectsTitle: 'Selected Work',
+    projectsTitle: 'Public Projects',
+    projectsNoteLabel: 'Note:',
+    projectsNote: 'The majority of solutions and projects I\'ve led and developed are private, proprietary work for clients and companies. The projects showcased here represent a selection of public work that demonstrates my technical capabilities and approach to problem-solving.',
     educationTitle: 'Education',
     educationSubtitle: 'Graduate and undergraduate studies (condensed).',
     educationLabels: {
@@ -166,7 +168,9 @@ export const content = {
       'Prospero en entornos colaborativos, traduciendo requisitos en soluciones prácticas y de alta calidad con una mentalidad orientada a la solución y una comunicación clara, y tengo experiencia trabajando con personas de distintas nacionalidades y orígenes, tanto de forma remota como presencial.',
     ],
     skillsTitle: 'Experiencia Técnica',
-    projectsTitle: 'Proyectos Destacados',
+    projectsTitle: 'Proyectos Públicos',
+    projectsNoteLabel: 'Nota:',
+    projectsNote: 'La mayoría de las soluciones y proyectos que he liderado y desarrollado son trabajos privados y propietarios para clientes y empresas. Los proyectos presentados aquí representan una selección de trabajos públicos que demuestran mis capacidades técnicas y mi enfoque para resolver problemas.',
     educationTitle: 'Educación',
     educationSubtitle: 'Estudios de posgrado y pregrado (resumen).',
     educationLabels: {
@@ -316,7 +320,9 @@ export const content = {
       "Je m'épanouis dans des environnements collaboratifs, traduisant les exigences en solutions pratiques et de haute qualité avec un esprit orienté vers les solutions et une communication claire, et j'ai de l'expérience de travail avec des personnes de différentes nationalités et origines, aussi bien à distance qu'en présentiel.",
     ],
     skillsTitle: 'Expertise Technique',
-    projectsTitle: 'Projets Sélectionnés',
+    projectsTitle: 'Projets Publics',
+    projectsNoteLabel: 'Remarque :',
+    projectsNote: 'La majorité des solutions et projets que j\'ai dirigés et développés sont des travaux privés et propriétaires pour des clients et des entreprises. Les projets présentés ici représentent une sélection de travaux publics qui démontrent mes compétences techniques et mon approche de résolution de problèmes.',
     educationTitle: 'Formation',
     educationSubtitle: 'Études supérieures et de premier cycle (résumé).',
     educationLabels: {
