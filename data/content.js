@@ -4,20 +4,20 @@
  */
 export const content = {
   en: {
-    role: 'Tech Lead & Full Stack Developer',
-    heroHeadline: 'Scalable Solutions. Cloud Native. AI Integrated.',
+    role: 'AI Systems Engineer · Cloud Architect · Full Stack Developer',
+    heroHeadline: 'Scalable Systems. Cloud Native. AI Integrated.',
     heroSub:
-      'Translating complex business requirements into high-quality, scalable technical architectures. AWS Certified.',
+      'Architecting AWS-native, AI-enabled systems at scale, from real-time inference pipelines serving 100K+ concurrent users to autonomous robotics. AWS Certified AI Practitioner.',
     aboutTitle: 'About Me',
     aboutText: [
-      'I am a Full Stack Developer with a proven track record in building desktop, mobile, and web applications, as well as APIs. With strong expertise in AWS, I design scalable, cloud-native solutions that meet evolving business needs.',
-      'I also have hands-on experience developing AI-powered systems, including computer vision applications, real-time image analysis, and data-driven solutions for security and monitoring use cases.',
-      'I thrive in collaborative environments, translating requirements into practical, high-quality solutions with a solution-oriented mindset and clear communication, and I have experience working with people from diverse nationalities and backgrounds, both remotely and in person.',
+      'I am a Cloud Solutions Architect and Tech Lead with 4+ years of experience building AWS-native, AI-enabled systems at scale. I currently lead a team of 6 engineers delivering cloud-native infrastructure for real-time, high-concurrency platforms.',
+      'I design and deploy real-time AI inference pipelines that process video, audio, and metadata streams. I recently co-architected a system sustaining 100K+ simultaneous sessions under multi-hour sustained load, and my work spans cloud-based computer vision, edge-deployed ML, and event-driven AI decision engines.',
+      'Beyond production systems, I extend AI and edge expertise into robotics: as team lead, I took an autonomous-vehicle team to overall 1st place at the international FIRA RoboWorld Cup 2026. I thrive in collaborative, cross-cultural environments, translating complex requirements into practical, high-quality solutions.',
     ],
     skillsTitle: 'Technical Expertise',
     experienceTitle: 'Professional Experience',
     experienceSubtitle:
-      '3+ years delivering scalable, production-grade solutions',
+      '4+ years building AWS-native, AI-enabled systems at scale',
     experience: [
       {
         company: 'Sumadi',
@@ -26,23 +26,48 @@ export const content = {
         location: 'Ontario, Canada · Remote',
         type: 'Contract Full-time',
         highlights: [
-          'Lead a team of 6 engineers, owning technical execution and delivery across multiple product streams',
-          'Guide architecture and development of cloud-native, web, desktop, mobile, and browser extension solutions',
-          'Consistently deliver all committed and additional out-of-scope projects on time with quality',
-          'Increase developer productivity through AI-enabled tooling, automation, and scalable engineering practices',
+          'Lead a team of 6 engineers, owning technical execution and 100% roadmap delivery across multiple concurrent product streams',
+          'Co-architected and scaled a high-concurrency cloud platform supporting 100K+ simultaneous sessions under sustained multi-hour workloads',
+          'Architected a real-time AI inference pipeline processing video, audio, and metadata streams for large-scale user behaviour analysis',
+          'Built a semi-automated proctoring alert system that scaled supervisor oversight from 1:50 to 1:500, avoiding ~2,000 additional hires across 100K+ concurrent users',
+          'Optimized throughput, latency, and cost across Lambda, API Gateway, DynamoDB, S3, and SQS under prolonged peak load',
+        ],
+      },
+      {
+        company: 'Laurentian University (LIMRL)',
+        role: 'Robotics Software Developer',
+        period: 'Sep 2025 - Present',
+        location: 'Sudbury, Ontario · Part-time',
+        type: 'Part-time',
+        highlights: [
+          'Develop and test autonomous-driving software across computer vision, machine learning, and edge AI on Linux-based embedded robotic platforms',
+          'Build ROS2 pipelines with multi-sensor stacks (camera, LiDAR, IMU) for real-time perception and navigation on physical robot hardware',
+          'As Team Lead of SnoBots-AC, won overall 1st place in the Autonomous Cars Challenge (Pro league) at the 31st FIRA RoboWorld Cup 2026, an international competition with teams from 20+ countries',
+          'Took 1st place in every judged category and coordinated a cross-country collaboration with teams from Malaysia and Uruguay',
+        ],
+      },
+      {
+        company: 'Sumadi',
+        role: 'Senior Full Stack Developer',
+        period: 'Jan 2025 - Jun 2025',
+        location: 'Remote',
+        type: 'Full-time',
+        highlights: [
+          'Designed high-concurrency, high-availability cloud architectures achieving up to 8× cost reduction vs. equivalent managed AWS AI services',
+          'Built and scaled real-time chat services supporting thousands of concurrent users',
+          'Led R&D on computer vision and generative AI, evaluating feasibility for product integration',
         ],
       },
       {
         company: 'Sumadi',
         role: 'Full Stack Developer',
-        period: 'Aug 2022 - Jun 2025',
-        location: 'Remote',
+        period: 'May 2022 - Dec 2024',
+        location: 'Tegucigalpa, Honduras · Hybrid',
         type: 'Full-time',
         highlights: [
-          'Designed and developed highly scalable cloud-based solutions optimized for high-concurrency and high-availability',
-          'Achieved up to 8× cost reduction compared to equivalent AWS AI services while maintaining functionality and quality',
-          'Built and scaled real-time chat and video calling services supporting thousands of concurrent users',
-          'Spearheaded scalability enhancements resulting in 70% increase in concurrent user capacity',
+          'Designed and developed scalable AWS-based systems using TypeScript, Node.js, Python, and SQL/NoSQL databases',
+          'Built a real-time video calling platform with AI-assisted workflows using AWS Chime SDK',
+          'Introduced micro-frontend architecture with React, accelerating delivery timelines by 60% through shared component reuse',
         ],
       },
     ],
@@ -61,10 +86,10 @@ export const content = {
       {
         school: 'Laurentian University / Université Laurentienne',
         degree: 'Master of Science (MSc), Computational Science',
-        dates: 'Jan 2025 – Dec 2026',
+        dates: 'Jan 2025 – Aug 2026 (Expected)',
         countryFlag: '🇨🇦',
         description:
-          'Focus on applied computational science and intelligent systems, covering machine learning/deep learning, robotics, IoT, data mining, research methods, ethical hacking, and business statistics.',
+          'Focus on applied computational science and intelligent systems, covering machine learning/deep learning, computer vision, robotics, IoT, data mining, research methods, ethical hacking, and business statistics. All degree requirements completed; conferral expected Aug 2026.',
         skills: [
           'Python',
           'JavaScript',
@@ -86,6 +111,8 @@ export const content = {
           'Strong foundation in computer science and engineering, with a focus on software development, databases, and practical leadership through academic service.',
         wesCredlyBadgeId: 'd03e19e7-9243-4cd6-81b6-e73cec47bc08',
         highlights: [
+          'GPA: 3.83 / 4.0 (95.85%)',
+          'International credentials verified by World Education Services (WES Canada)',
           'Total undergraduate semester credits: 154.5',
           'Activities: faculty association member, math & programming tutor, motivational speaker',
         ],
@@ -143,6 +170,17 @@ export const content = {
         link: 'https://www.linkedin.com/feed/update/urn:li:activity:7409273788586123264/',
       },
       {
+        title: 'Warehouse Robot Navigation: Q-Learning & Exploration Bonus',
+        desc: 'Tabular Q-Learning on a 400-state warehouse gridworld. The Exploration Bonus variant converged 3.5× faster (~43 vs. ~149 episodes for ε-greedy), reaching a 100% task success rate across 3 random seeds.',
+        tags: [
+          'Python',
+          'NumPy',
+          'Matplotlib',
+          'Reinforcement Learning',
+          'Q-Learning',
+        ],
+      },
+      {
         title:
           'Comparative Evaluation of Geometric (AprilTag) and YOLO-Based Object Detection for Urban Navigation',
         desc: 'A computer vision project comparing AprilTag-based geometric detection and a fine-tuned YOLOv8 model for real-time traffic sign recognition, analyzing accuracy, robustness, latency, and decision consistency in urban navigation scenarios.',
@@ -188,20 +226,20 @@ export const content = {
     rights: 'All rights reserved.',
   },
   es: {
-    role: 'Líder Técnico y Desarrollador Full Stack',
-    heroHeadline: 'Soluciones Escalables, Cloud-Native, IA Integrada',
+    role: 'Ingeniero de Sistemas de IA · Arquitecto Cloud · Desarrollador Full Stack',
+    heroHeadline: 'Sistemas Escalables. Cloud-Native. IA Integrada.',
     heroSub:
-      'Traduciendo requisitos comerciales complejos en arquitecturas técnicas escalables y de alta calidad. Certificado por AWS.',
+      'Diseño de sistemas nativos de AWS habilitados con IA a gran escala, desde pipelines de inferencia en tiempo real para 100K+ usuarios concurrentes hasta robótica autónoma. Certificado AWS AI Practitioner.',
     aboutTitle: 'Sobre Mí',
     aboutText: [
-      'Soy un Desarrollador Full Stack con un historial comprobado en la creación de aplicaciones de escritorio, móviles y web, así como APIs. Con una sólida experiencia en AWS, diseño soluciones escalables y nativas de la nube que satisfacen las necesidades empresariales en evolución.',
-      'También tengo experiencia práctica en el desarrollo de sistemas impulsados por IA, incluidas aplicaciones de visión por computadora, análisis de imágenes en tiempo real y soluciones basadas en datos para casos de uso de seguridad y monitoreo.',
-      'Prospero en entornos colaborativos, traduciendo requisitos en soluciones prácticas y de alta calidad con una mentalidad orientada a la solución y una comunicación clara, y tengo experiencia trabajando con personas de distintas nacionalidades y orígenes, tanto de forma remota como presencial.',
+      'Soy Arquitecto de Soluciones Cloud y Líder Técnico con más de 4 años de experiencia construyendo sistemas nativos de AWS habilitados con IA a gran escala. Actualmente lidero un equipo de 6 ingenieros entregando infraestructura cloud-native para plataformas de alta concurrencia en tiempo real.',
+      'Diseño y despliego pipelines de inferencia de IA en tiempo real que procesan flujos de video, audio y metadatos. Recientemente co-diseñé un sistema que sostiene más de 100K sesiones simultáneas bajo carga sostenida de varias horas, y mi trabajo abarca visión por computadora en la nube, ML desplegado en el borde y motores de decisión de IA basados en eventos.',
+      'Más allá de los sistemas de producción, extiendo mi experiencia en IA y edge hacia la robótica: como líder de equipo, llevé a un equipo de vehículos autónomos al 1er lugar general en la FIRA RoboWorld Cup 2026 internacional. Prospero en entornos colaborativos y multiculturales, traduciendo requisitos complejos en soluciones prácticas y de alta calidad.',
     ],
     skillsTitle: 'Experiencia Técnica',
     experienceTitle: 'Experiencia Profesional',
     experienceSubtitle:
-      'Más de 3 años entregando soluciones escalables de nivel producción',
+      'Más de 4 años construyendo sistemas nativos de AWS habilitados con IA a gran escala',
     experience: [
       {
         company: 'Sumadi',
@@ -210,23 +248,48 @@ export const content = {
         location: 'Ontario, Canadá · Remoto',
         type: 'Contrato Tiempo completo',
         highlights: [
-          'Lidero un equipo de 6 ingenieros, gestionando la ejecución técnica y entrega en múltiples líneas de producto',
-          'Guío la arquitectura y desarrollo de soluciones cloud-native, web, escritorio, móvil y extensiones de navegador',
-          'Entrego consistentemente todos los proyectos comprometidos y adicionales a tiempo con calidad',
-          'Aumento la productividad del equipo mediante herramientas con IA, automatización y prácticas de ingeniería escalables',
+          'Lidero un equipo de 6 ingenieros, gestionando la ejecución técnica y el 100% de entrega del roadmap en múltiples líneas de producto concurrentes',
+          'Co-diseñé y escalé una plataforma cloud de alta concurrencia que soporta más de 100K sesiones simultáneas bajo cargas sostenidas de varias horas',
+          'Diseñé un pipeline de inferencia de IA en tiempo real que procesa flujos de video, audio y metadatos para análisis de comportamiento de usuarios a gran escala',
+          'Construí un sistema semiautomático de alertas de proctoring que escaló la supervisión de 1:50 a 1:500, evitando la contratación de ~2,000 supervisores adicionales para 100K+ usuarios concurrentes',
+          'Optimicé rendimiento, latencia y costos en Lambda, API Gateway, DynamoDB, S3 y SQS bajo carga pico prolongada',
+        ],
+      },
+      {
+        company: 'Laurentian University (LIMRL)',
+        role: 'Desarrollador de Software de Robótica',
+        period: 'Sep 2025 - Presente',
+        location: 'Sudbury, Ontario · Medio tiempo',
+        type: 'Medio tiempo',
+        highlights: [
+          'Desarrollo y pruebo software de conducción autónoma en visión por computadora, machine learning y edge AI sobre plataformas robóticas embebidas basadas en Linux',
+          'Construyo pipelines ROS2 con stacks multisensor (cámara, LiDAR, IMU) para percepción y navegación en tiempo real sobre hardware robótico físico',
+          'Como Líder del equipo SnoBots-AC, gané el 1er lugar general en el Autonomous Cars Challenge (liga Pro) en la 31ª FIRA RoboWorld Cup 2026, competencia internacional con equipos de más de 20 países',
+          'Obtuve el 1er lugar en cada categoría evaluada y coordiné una colaboración internacional con equipos de Malasia y Uruguay',
+        ],
+      },
+      {
+        company: 'Sumadi',
+        role: 'Desarrollador Full Stack Senior',
+        period: 'Ene 2025 - Jun 2025',
+        location: 'Remoto',
+        type: 'Tiempo completo',
+        highlights: [
+          'Diseñé arquitecturas cloud de alta concurrencia y disponibilidad logrando hasta 8× de reducción de costos frente a servicios gestionados equivalentes de AWS AI',
+          'Construí y escalé servicios de chat en tiempo real soportando miles de usuarios concurrentes',
+          'Lideré I+D en visión por computadora e IA generativa, evaluando la viabilidad para integración en producto',
         ],
       },
       {
         company: 'Sumadi',
         role: 'Desarrollador Full Stack',
-        period: 'Ago 2022 - Jun 2025',
-        location: 'Remoto',
+        period: 'May 2022 - Dic 2024',
+        location: 'Tegucigalpa, Honduras · Híbrido',
         type: 'Tiempo completo',
         highlights: [
-          'Diseñé y desarrollé soluciones en la nube altamente escalables optimizadas para alta concurrencia y disponibilidad',
-          'Logré hasta 8× de reducción de costos en comparación con servicios equivalentes de AWS AI manteniendo funcionalidad y calidad',
-          'Construí y escalé servicios de chat en tiempo real y videollamadas soportando miles de usuarios concurrentes',
-          'Lideré mejoras de escalabilidad resultando en un aumento del 70% en la capacidad de usuarios concurrentes',
+          'Diseñé y desarrollé sistemas escalables basados en AWS usando TypeScript, Node.js, Python y bases de datos SQL/NoSQL',
+          'Construí una plataforma de videollamadas en tiempo real con flujos asistidos por IA usando AWS Chime SDK',
+          'Introduje una arquitectura de micro-frontend con React, acelerando los tiempos de entrega en un 60% mediante la reutilización de componentes compartidos',
         ],
       },
     ],
@@ -245,10 +308,10 @@ export const content = {
       {
         school: 'Laurentian University / Université Laurentienne',
         degree: 'Maestría en Ciencias (MSc), Ciencia Computacional',
-        dates: 'Ene 2025 – Dic 2026',
+        dates: 'Ene 2025 – Ago 2026 (Esperado)',
         countryFlag: '🇨🇦',
         description:
-          'Enfoque en ciencia computacional aplicada y sistemas inteligentes, abarcando machine learning/deep learning, robótica, IoT, minería de datos, métodos de investigación, hacking ético y estadística empresarial.',
+          'Enfoque en ciencia computacional aplicada y sistemas inteligentes, abarcando machine learning/deep learning, visión por computadora, robótica, IoT, minería de datos, métodos de investigación, hacking ético y estadística empresarial. Todos los requisitos del programa completados; conferido esperado para Ago 2026.',
         skills: [
           'Python',
           'JavaScript',
@@ -270,6 +333,8 @@ export const content = {
           'Base sólida en ingeniería y ciencias de la computación, con enfoque en desarrollo de software, bases de datos y liderazgo a través de servicio académico.',
         wesCredlyBadgeId: 'd03e19e7-9243-4cd6-81b6-e73cec47bc08',
         highlights: [
+          'GPA: 3.83 / 4.0 (95.85%)',
+          'Credenciales internacionales verificadas por World Education Services (WES Canadá)',
           'Créditos totales de pregrado (semestre): 154.5',
           'Actividades: miembro de asociación de facultad, tutor de matemáticas y programación, orador motivacional',
         ],
@@ -327,6 +392,17 @@ export const content = {
         link: 'https://www.linkedin.com/feed/update/urn:li:activity:7409273788586123264/',
       },
       {
+        title: 'Navegación de Robot de Almacén: Q-Learning y Bono de Exploración',
+        desc: 'Q-Learning tabular en un gridworld de almacén de 400 estados. La variante con Bono de Exploración convergió 3.5× más rápido (~43 vs. ~149 episodios para ε-greedy), alcanzando una tasa de éxito del 100% en 3 semillas aleatorias.',
+        tags: [
+          'Python',
+          'NumPy',
+          'Matplotlib',
+          'Aprendizaje por Refuerzo',
+          'Q-Learning',
+        ],
+      },
+      {
         title:
           'Evaluación comparativa de detección geométrica (AprilTag) y detección basada en YOLO para navegación urbana',
         desc: 'Proyecto de visión por computadora que compara la detección geométrica con AprilTag y un modelo YOLOv8 ajustado para reconocimiento de señales de tráfico en tiempo real, analizando precisión, robustez, latencia y consistencia de decisión en escenarios de navegación urbana.',
@@ -372,20 +448,20 @@ export const content = {
     rights: 'Todos los derechos reservados.',
   },
   fr: {
-    role: 'Tech Lead & Développeur Full Stack',
-    heroHeadline: 'Solutions Évolutives. Cloud Native. Intégration IA.',
+    role: "Ingénieur Systèmes IA · Architecte Cloud · Développeur Full Stack",
+    heroHeadline: 'Systèmes Évolutifs. Cloud Native. Intégration IA.',
     heroSub:
-      'Traduire des exigences commerciales complexes en architectures techniques évolutives et de haute qualité. Certifié AWS.',
+      "Conception de systèmes cloud-native AWS dotés d'IA à grande échelle, des pipelines d'inférence en temps réel pour plus de 100K utilisateurs simultanés jusqu'à la robotique autonome. Certifié AWS AI Practitioner.",
     aboutTitle: 'À Propos',
     aboutText: [
-      "Je suis un développeur Full Stack avec une expérience éprouvée dans la création d'applications de bureau, mobiles et web, ainsi que d'API. Avec une solide expertise en AWS, je conçois des solutions évolutives et cloud-native qui répondent aux besoins commerciaux en constante évolution.",
-      "J'ai également une expérience pratique dans le développement de systèmes alimentés par l'IA, y compris des applications de vision par ordinateur, l'analyse d'images en temps réel et des solutions basées sur les données pour des cas d'utilisation de sécurité et de surveillance.",
-      "Je m'épanouis dans des environnements collaboratifs, traduisant les exigences en solutions pratiques et de haute qualité avec un esprit orienté vers les solutions et une communication claire, et j'ai de l'expérience de travail avec des personnes de différentes nationalités et origines, aussi bien à distance qu'en présentiel.",
+      "Je suis Architecte de Solutions Cloud et Responsable Technique avec plus de 4 ans d'expérience dans la construction de systèmes cloud-native AWS dotés d'IA à grande échelle. Je dirige actuellement une équipe de 6 ingénieurs livrant une infrastructure cloud-native pour des plateformes à haute concurrence en temps réel.",
+      "Je conçois et déploie des pipelines d'inférence IA en temps réel qui traitent des flux vidéo, audio et de métadonnées. J'ai récemment co-conçu un système soutenant plus de 100K sessions simultanées sous charge continue de plusieurs heures, et mon travail couvre la vision par ordinateur dans le cloud, le ML déployé en périphérie et les moteurs de décision IA événementiels.",
+      "Au-delà des systèmes de production, j'étends mon expertise en IA et en edge vers la robotique : en tant que chef d'équipe, j'ai mené une équipe de véhicules autonomes à la 1re place au classement général de la FIRA RoboWorld Cup 2026 internationale. Je m'épanouis dans des environnements collaboratifs et multiculturels, traduisant des exigences complexes en solutions pratiques et de haute qualité.",
     ],
     skillsTitle: 'Expertise Technique',
     experienceTitle: 'Expérience Professionnelle',
     experienceSubtitle:
-      'Plus de 3 ans à fournir des solutions évolutives de niveau production',
+      "Plus de 4 ans à construire des systèmes cloud-native AWS dotés d'IA à grande échelle",
     experience: [
       {
         company: 'Sumadi',
@@ -394,23 +470,48 @@ export const content = {
         location: 'Ontario, Canada · À distance',
         type: 'Contrat Temps plein',
         highlights: [
-          "Équipe de 6 ingénieurs, responsable de l'exécution technique et de la livraison sur plusieurs flux de produits",
-          "Guide l'architecture et le développement de solutions cloud-native, web, desktop, mobile et extensions de navigateur",
-          'Livre systématiquement tous les projets engagés et supplémentaires à temps avec qualité',
-          "Augmente la productivité grâce à des outils IA, automatisation et pratiques d'ingénierie évolutives",
+          "Je dirige une équipe de 6 ingénieurs, responsable de l'exécution technique et de 100% de la livraison de la feuille de route sur plusieurs flux de produits simultanés",
+          "Co-conçu et mis à l'échelle une plateforme cloud à haute concurrence supportant plus de 100K sessions simultanées sous charges continues de plusieurs heures",
+          "Conçu un pipeline d'inférence IA en temps réel traitant des flux vidéo, audio et de métadonnées pour l'analyse du comportement des utilisateurs à grande échelle",
+          "Construit un système d'alertes de surveillance semi-automatisé qui a fait passer le ratio de supervision de 1:50 à 1:500, évitant l'embauche de ~2 000 superviseurs supplémentaires pour plus de 100K utilisateurs simultanés",
+          'Optimisé le débit, la latence et les coûts sur Lambda, API Gateway, DynamoDB, S3 et SQS sous charge de pointe prolongée',
+        ],
+      },
+      {
+        company: 'Laurentian University (LIMRL)',
+        role: 'Développeur Logiciel en Robotique',
+        period: 'Sep 2025 - Présent',
+        location: 'Sudbury, Ontario · Temps partiel',
+        type: 'Temps partiel',
+        highlights: [
+          "Je développe et teste des logiciels de conduite autonome couvrant la vision par ordinateur, le machine learning et l'edge AI sur des plateformes robotiques embarquées sous Linux",
+          'Je construis des pipelines ROS2 avec des stacks multi-capteurs (caméra, LiDAR, IMU) pour la perception et la navigation en temps réel sur du matériel robotique physique',
+          "En tant que chef de l'équipe SnoBots-AC, remporté la 1re place au classement général de l'Autonomous Cars Challenge (ligue Pro) à la 31e FIRA RoboWorld Cup 2026, une compétition internationale réunissant des équipes de plus de 20 pays",
+          "Obtenu la 1re place dans chaque catégorie évaluée et coordonné une collaboration internationale avec des équipes de Malaisie et d'Uruguay",
+        ],
+      },
+      {
+        company: 'Sumadi',
+        role: 'Développeur Full Stack Senior',
+        period: 'Jan 2025 - Juin 2025',
+        location: 'À distance',
+        type: 'Temps plein',
+        highlights: [
+          "Conçu des architectures cloud à haute concurrence et disponibilité atteignant jusqu'à 8× de réduction des coûts par rapport aux services gérés équivalents AWS AI",
+          "Construit et mis à l'échelle des services de chat en temps réel supportant des milliers d'utilisateurs simultanés",
+          "Dirigé la R&D en vision par ordinateur et IA générative, évaluant la faisabilité d'intégration au produit",
         ],
       },
       {
         company: 'Sumadi',
         role: 'Développeur Full Stack',
-        period: 'Août 2022 - Juin 2025',
-        location: 'À distance',
+        period: 'Mai 2022 - Déc 2024',
+        location: 'Tegucigalpa, Honduras · Hybride',
         type: 'Temps plein',
         highlights: [
-          'Conçu et développé des solutions cloud hautement évolutives optimisées pour haute concurrence et disponibilité',
-          "Réduction des coûts jusqu'à 8× par rapport aux services équivalents AWS AI tout en maintenant fonctionnalité et qualité",
-          "Construit et mis à l'échelle des services de chat en temps réel et vidéo supportant des milliers d'utilisateurs simultanés",
-          "Améliorations de l'évolutivité augmentant la capacité d'utilisateurs simultanés de 70%",
+          'Conçu et développé des systèmes évolutifs basés sur AWS avec TypeScript, Node.js, Python et bases de données SQL/NoSQL',
+          "Construit une plateforme d'appels vidéo en temps réel avec des flux assistés par IA utilisant AWS Chime SDK",
+          "Introduit une architecture micro-frontend avec React, accélérant les délais de livraison de 60% grâce à la réutilisation de composants partagés",
         ],
       },
     ],
@@ -429,10 +530,10 @@ export const content = {
       {
         school: 'Laurentian University / Université Laurentienne',
         degree: 'Master of Science (MSc), Science computationnelle',
-        dates: 'Jan 2025 – Déc 2026',
+        dates: 'Jan 2025 – Août 2026 (Prévu)',
         countryFlag: '🇨🇦',
         description:
-          'Axé sur la science computationnelle appliquée et les systèmes intelligents : machine learning/deep learning, robotique, IoT, fouille de données, méthodes de recherche, hacking éthique et statistiques.',
+          'Axé sur la science computationnelle appliquée et les systèmes intelligents : machine learning/deep learning, vision par ordinateur, robotique, IoT, fouille de données, méthodes de recherche, hacking éthique et statistiques. Toutes les exigences du diplôme complétées ; obtention prévue pour août 2026.',
         skills: [
           'Python',
           'JavaScript',
@@ -454,6 +555,8 @@ export const content = {
           'Solide base en informatique et ingénierie, avec un accent sur le développement logiciel, les bases de données et le leadership via l’engagement académique.',
         wesCredlyBadgeId: 'd03e19e7-9243-4cd6-81b6-e73cec47bc08',
         highlights: [
+          'GPA : 3.83 / 4.0 (95.85%)',
+          'Diplômes internationaux vérifiés par World Education Services (WES Canada)',
           'Crédits totaux (semestre) : 154.5',
           'Activités : membre de l’association de faculté, tuteur en maths et programmation, conférencier motivationnel',
         ],
@@ -509,6 +612,17 @@ export const content = {
         desc: "Système de navigation basé sur la vision sur AGILEX LIMO utilisant une seule caméra monoculaire. Intègre la reconnaissance de panneaux YOLOv8, le suivi de ligne PD et l'évitement d'obstacles FSM sans LiDAR.",
         tags: ['Python', 'ROS2', 'YOLOv8', 'OpenCV'],
         link: 'https://www.linkedin.com/feed/update/urn:li:activity:7409273788586123264/',
+      },
+      {
+        title: "Navigation de Robot d'Entrepôt : Q-Learning et Bonus d'Exploration",
+        desc: "Q-Learning tabulaire sur un gridworld d'entrepôt à 400 états. La variante avec Bonus d'Exploration a convergé 3,5× plus vite (~43 contre ~149 épisodes pour ε-greedy), atteignant un taux de réussite de 100% sur 3 graines aléatoires.",
+        tags: [
+          'Python',
+          'NumPy',
+          'Matplotlib',
+          'Apprentissage par Renforcement',
+          'Q-Learning',
+        ],
       },
       {
         title:
