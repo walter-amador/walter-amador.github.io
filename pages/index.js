@@ -693,7 +693,7 @@ export default function Portfolio() {
         />
         <meta
           property='og:image'
-          content='https://walter-amador.com/favicon.ico'
+          content='https://walter-amador.com/launcher.webp'
         />
 
         <meta name='twitter:card' content='summary' />
@@ -704,7 +704,7 @@ export default function Portfolio() {
         />
         <meta
           name='twitter:image'
-          content='https://walter-amador.com/favicon.ico'
+          content='https://walter-amador.com/launcher.webp'
         />
       </Head>
 
