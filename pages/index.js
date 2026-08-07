@@ -624,6 +624,53 @@ function SkillsSection({ darkMode }) {
   );
 }
 
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Walter Amador',
+  url: 'https://walter-amador.com/',
+  image: 'https://walter-amador.com/launcher.webp',
+  jobTitle: 'AI Systems Engineer · Cloud Architect · Full Stack Developer',
+  description:
+    'Cloud Solutions Architect and Tech Lead building AWS-native, AI-enabled systems at scale, from real-time inference pipelines serving 100K+ concurrent users to autonomous robotics.',
+  email: 'mailto:amadorwalter3418@gmail.com',
+  sameAs: [
+    'https://linkedin.com/in/walter-amador',
+    'https://github.com/walter-amador',
+    'https://www.credly.com/badges/586c3a24-f1e1-4aa1-a155-0f68fb893af6/public_url',
+  ],
+  worksFor: {
+    '@type': 'Organization',
+    name: 'Sumadi',
+  },
+  alumniOf: [
+    {
+      '@type': 'CollegeOrUniversity',
+      name: 'Laurentian University / Université Laurentienne',
+    },
+    {
+      '@type': 'CollegeOrUniversity',
+      name:
+        "Universidad Católica de Honduras 'Nuestra Señora Reina de la Paz'",
+    },
+  ],
+  knowsAbout: [
+    'AWS',
+    'Cloud Architecture',
+    'Artificial Intelligence',
+    'Machine Learning',
+    'Computer Vision',
+    'Robotics',
+    'React',
+    'Next.js',
+    'Node.js',
+    'Python',
+    'TypeScript',
+    'Serverless Architecture',
+    'DevOps',
+  ],
+};
+
 export default function Portfolio() {
   const [darkMode, setDarkMode] = useState(false);
   const [language, setLanguage] = useState('en');
@@ -683,6 +730,7 @@ export default function Portfolio() {
           content='Walter Amador — Tech Lead & Full Stack Developer. Scalable architecture, cloud strategy, and AI integration.'
         />
         <link rel='icon' href='/favicon.ico' />
+        <link rel='canonical' href='https://walter-amador.com/' />
 
         <meta property='og:type' content='website' />
         <meta property='og:url' content='https://walter-amador.com/' />
@@ -705,6 +753,13 @@ export default function Portfolio() {
         <meta
           name='twitter:image'
           content='https://walter-amador.com/launcher.webp'
+        />
+
+        <script
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personSchema).replace(/</g, '\\u003c'),
+          }}
         />
       </Head>
 
