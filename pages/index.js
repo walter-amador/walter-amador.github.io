@@ -683,6 +683,29 @@ export default function Portfolio() {
           content='Walter Amador — Tech Lead & Full Stack Developer. Scalable architecture, cloud strategy, and AI integration.'
         />
         <link rel='icon' href='/favicon.ico' />
+
+        <meta property='og:type' content='website' />
+        <meta property='og:url' content='https://walter-amador.com/' />
+        <meta property='og:title' content='Walter Amador | Portfolio' />
+        <meta
+          property='og:description'
+          content='Walter Amador — Tech Lead & Full Stack Developer. Scalable architecture, cloud strategy, and AI integration.'
+        />
+        <meta
+          property='og:image'
+          content='https://walter-amador.com/favicon.ico'
+        />
+
+        <meta name='twitter:card' content='summary' />
+        <meta name='twitter:title' content='Walter Amador | Portfolio' />
+        <meta
+          name='twitter:description'
+          content='Walter Amador — Tech Lead & Full Stack Developer. Scalable architecture, cloud strategy, and AI integration.'
+        />
+        <meta
+          name='twitter:image'
+          content='https://walter-amador.com/favicon.ico'
+        />
       </Head>
 
       <div
