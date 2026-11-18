@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
 import React, { useEffect, useRef, useState } from 'react';
 import {
   ChevronDown,
@@ -28,6 +29,18 @@ import {
   issuerMeta,
 } from '../lib/certificates-ui';
 import { EducationSection } from '../components/EducationSection';
+
+// WebGL can't render during the static export, so the 3D hero loads client-side
+// only. The placeholder reserves the same box to avoid layout shift.
+const HeroScene = dynamic(() => import('../components/HeroScene'), {
+  ssr: false,
+  loading: () => (
+    <div
+      className='h-80 w-full max-w-[440px] md:h-[400px]'
+      aria-hidden='true'
+    />
+  ),
+});
 
 /**
  * ANIMATED BACKGROUND COMPONENT
@@ -1023,9 +1036,17 @@ export default function Portfolio() {
                   </div>
 
                   <div className='flex justify-center lg:justify-end'>
-                    <TechConstellation
+                    <HeroScene
                       mouseX={mousePos.x}
                       mouseY={mousePos.y}
+                      darkMode={darkMode}
+                      label={t.heroSceneLabel}
+                      fallback={
+                        <TechConstellation
+                          mouseX={mousePos.x}
+                          mouseY={mousePos.y}
+                        />
+                      }
                     />
                   </div>
                 </div>

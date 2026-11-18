@@ -8,6 +8,8 @@ export const content = {
     heroHeadline: 'Scalable Systems. Cloud Native. AI Integrated.',
     heroSub:
       'Architecting AWS-native, AI-enabled systems at scale, from real-time inference pipelines serving 100K+ concurrent users to autonomous robotics. AWS Certified AI Practitioner.',
+    heroSceneLabel:
+      'Animated 3D diagram: an autonomous robot scans its surroundings with LiDAR, streams the data through an AWS pipeline (API Gateway, Lambda, Bedrock, SQS, DynamoDB, S3) and receives object detections back.',
     aboutTitle: 'About Me',
     aboutText: [
       'I am a Cloud Solutions Architect and Tech Lead with 4+ years of experience building AWS-native, AI-enabled systems at scale. I currently lead a team of 6 engineers delivering cloud-native infrastructure for real-time, high-concurrency platforms.',
@@ -230,6 +232,8 @@ export const content = {
     heroHeadline: 'Sistemas Escalables. Cloud-Native. IA Integrada.',
     heroSub:
       'Diseño de sistemas nativos de AWS habilitados con IA a gran escala, desde pipelines de inferencia en tiempo real para 100K+ usuarios concurrentes hasta robótica autónoma. Certificado AWS AI Practitioner.',
+    heroSceneLabel:
+      'Diagrama 3D animado: un robot autónomo escanea su entorno con LiDAR, envía los datos a través de un pipeline en AWS (API Gateway, Lambda, Bedrock, SQS, DynamoDB, S3) y recibe de vuelta las detecciones de objetos.',
     aboutTitle: 'Sobre Mí',
     aboutText: [
       'Soy Arquitecto de Soluciones Cloud y Líder Técnico con más de 4 años de experiencia construyendo sistemas nativos de AWS habilitados con IA a gran escala. Actualmente lidero un equipo de 6 ingenieros entregando infraestructura cloud-native para plataformas de alta concurrencia en tiempo real.',
@@ -452,6 +456,8 @@ export const content = {
     heroHeadline: 'Systèmes Évolutifs. Cloud Native. Intégration IA.',
     heroSub:
       "Conception de systèmes cloud-native AWS dotés d'IA à grande échelle, des pipelines d'inférence en temps réel pour plus de 100K utilisateurs simultanés jusqu'à la robotique autonome. Certifié AWS AI Practitioner.",
+    heroSceneLabel:
+      "Diagramme 3D animé : un robot autonome scanne son environnement avec un LiDAR, envoie les données dans un pipeline AWS (API Gateway, Lambda, Bedrock, SQS, DynamoDB, S3) et reçoit en retour les objets détectés.",
     aboutTitle: 'À Propos',
     aboutText: [
       "Je suis Architecte de Solutions Cloud et Responsable Technique avec plus de 4 ans d'expérience dans la construction de systèmes cloud-native AWS dotés d'IA à grande échelle. Je dirige actuellement une équipe de 6 ingénieurs livrant une infrastructure cloud-native pour des plateformes à haute concurrence en temps réel.",
